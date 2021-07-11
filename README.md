@@ -20,7 +20,7 @@ AfterCredits is a movie chat app. There are two versions of the app:
 **A. Early Beginnings version:**
 
 ###### Sitemap: Early Beginnings version
-NOTE SITEMAPS NEED TO BE REDESIGNED IF CARDS ARE VISIBLE PRIOR TO LOGIN ************
+
 ![Core App Sitemap](docs/core_app.PNG)
 
 ###### Log in/Sign up: Early Beginnings version
@@ -72,7 +72,7 @@ Styling will include the following:
 **B. Expansion version:**
 
 ###### Sitemap: Expansion version
-NOTE SITEMAPS NEED TO BE REDESIGNED IF CARDS ARE VISIBLE PRIOR TO LOGIN ************
+
 ![Expanded App Sitemap](docs/expanded_app.PNG)
 
 ###### Log in/Sign up: Expansion version
@@ -107,7 +107,8 @@ As above but instead of including an admin email address, users can submit a con
 Styling will include the following:
 1.	Icons: https://fontawesome.com
 2.	Google fonts: https://fonts.google.com/
-3.  Animated background: https://greensock.com/
+3. Background image/s from unsplash: https://unsplash.com/
+4.  Animated background: https://greensock.com/
 
 ###### Additional features for future development (the nice-to-have-but-not-included list)
 - A search feature so that users can search for a movie or series by genre, actor, rating etc. This feature will not be pursued in the current project. It would require database design changes and features that are beyond the scope of the current project.
