@@ -8,11 +8,15 @@ ___
 ### R1: DESCRIPTION OF WEBSITE
 
 #### PURPOSE 
-AfterCredits is a movie chat app. There are two versions of the app:
+AfterCredits is a movie chat app. There are two proposed versions of the app:
 
 **A. Early Beginnings version:** The initial core app version is designed to build user community. There will be one movie or series for the month, similar to a book club. Community users can see what the select movie/series is so that they can have a chance to watch it if they haven't seen it yet. When they are ready, they can join the chatroom to discuss the movie/series with other users.
 
-**B. Expansion version:** The expanded app will have multiple movies/series, each with their own chatroom. Users can join a chatroom to discuss any movie or series of their liking whenever they wish rather than waiting for a single monthly selection. 
+**B. Expansion version:** The expanded app will have multiple movies/series, each with their own chatroom. Users can join a chatroom to discuss any movie or series of their liking whenever they wish, rather than waiting for a single monthly selection. 
+
+The development plan is to build the Early Beginnings version first and to then commence incorporating as many features as possible whilst working towards building the total Expansion version. It is fairly unlikely that the entire Expansion version will be completed within the relevant development timeframe. It is anticipated that the final product will be an Early Beginnings version incorporating some additional features that have been proposed for the Expansion version. 
+
+From a real life marketing perspective, the plan would be to achieve continued member and participation growth by commencing with a small and intimate community and gradually expanding the collection of movie/series chatrooms as the community grows (and becomes, perhaps, less intimate due to the increased number of users), thereby allowing for the users to be spread out accross multiple chatrooms. 
 
 ---
 #### FUNCTIONALITY/ FEATURES
