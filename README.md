@@ -202,7 +202,11 @@ Wireframes were prepared using Balsamiq Wireframes.
 
 **A. Early Beginnings version**
 ![Core app wireframes: Early Beginnings version](docs/draft_wireframes.png)
+<br>
 
+**B. Expansion version**
+
+![Expanded app wireframes: Expansion version](docs/expanded_app_wireframes.png)
 
 ### R6: TRELLO
 https://trello.com/b/VLtFLtdT/full-stack-app
