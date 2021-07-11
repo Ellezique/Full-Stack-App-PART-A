@@ -133,23 +133,46 @@ The target audience includes users who:
 - want to discuss or read comments about movies/series 
 - get more information about movies/series
 
-#### TECH STACK & TOOLS 
-- React.js (front-end/client side)
-- Ruby on Rails (back-end/ server side)
-- PostgreSQL (database)
-- Jest (testing front-end)
-- Rspec (testing back-end)
-- HTML 
-- CSS
+#### TECH STACK 
 
-- Netlify (React front-end deployment)
-- Heroku (Rails back-end deployment)
+- **HTML**: HyperText Markup Language is the standard markup language for documents to display in web browsers. 
+- **CSS**: Cascading Style Sheets describe the presentation and styling of markup language documents.
 
+##### Front-end/client side
+- **React.js**: [React](https://reactjs.org/) is a front-end (client side) **JavaScript** library used to build user interfaces and components.
+- **Yarn**: [Yarn](https://yarnpkg.com/) is a [package manager](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/) for JavaScript (client side) that will be used for this project.
+- **Jest**: [Jest](https://jestjs.io/) is a testing framework that works with React projects (testing front-end).
+- **Netlify**: [Netlify](https://www.netlify.com/) will be used to deploy the front-end React repository. The service used for this project is free of charge.
 
+##### Back-end/client side
+- **Ruby on Rails**: [Ruby on Rails](https://rubyonrails.org/) is a back-end/ server side application framework written in Ruby. It has a model-view-controller framework.
+- **RubyGems**: [Ruby Gems](https://rubygems.org/) is a package management framework for Ruby and is used to distribute Ruby programs and libraries. RubyGems is a tool used to install gems.
+- **Rspec**: [Rspec](https://rspec.info/) is a meta-gem used for testing in Ruby on Rails.
+- **Heroku**: [Heroku](https://www.heroku.com/) is a cloud platform that supports Ruby on Rails. It will be used to deploy the Ruby on Rails repository (back-end/ server-side). The service used for this project is free of charge.
 
+##### Database
+- **PostgreSQL**: [PostgreSQL](https://www.postgresql.org/) is a free relational database management system.
 
+##### Repositories
+- **Github**: [Github](https://github.com/) is a development platform and service hosting Git version control. The service used for this project is free of charge.
+
+##### Source Control 
+- **Git**: [Git](https://git-scm.com/) is a version control system for tracking changes across a set of files and to coordinate work between programmers working collaboratively on developing source code.
+
+Proposed version control:[^1] 
+1.    Create app in central repository on Github
+2.    Clone to local
+3.    Developers checkout their own branch   `$git checkout -b Developername`
+4.    Commit changes on local
+5.    (a) When the central repository has changed, developers need to merge their local with the central repository by pulling the changes from the main branch and merging ` $git merge master `
+6.    Resolve conflicts locally.
+7.    Push changes to the central repository ` $push origin Developername`
+
+Or instead of 5(a), the developer may merge their branch on github (without updating their main branch) by pushing their branch to github, making a pull request on github (from the main branch to their branch) and if there are no conflicts, merge. Then update local main from github main by making a pull request.
+[^1]: This source control flow was used by Team Hack Overflow, with special credit to Roba Elshazly.
 
 ### R2: DATAFLOW DIAGRAM
+
 Provides dataflow diagram(s) that strictly follow the standard convensions to clearly identify the processes within your application. Clearly depicts where data is coming from, where it is going and how it is being stored. 
 https://edstem.org/courses/4966/lessons/12821/slides/91792 
 
