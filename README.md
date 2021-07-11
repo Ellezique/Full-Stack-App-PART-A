@@ -16,7 +16,7 @@ AfterCredits is a movie chat app. There are two proposed versions of the app:
 
 The development plan is to build the Early Beginnings version first and to then commence incorporating as many features as possible whilst working towards building the total Expansion version. It is fairly unlikely that the entire Expansion version will be completed within the relevant development timeframe. It is anticipated that the final product will be an Early Beginnings version incorporating some additional features that have been proposed for the Expansion version. 
 
-From a real life marketing perspective, the plan would be to achieve continued member and participation growth by commencing with a small and intimate community and gradually expanding the collection of movie/series chatrooms as the community grows (and becomes, perhaps, less intimate due to the increased number of users), thereby allowing for the users to be spread out accross multiple chatrooms. 
+From a real life marketing perspective, the plan would be to achieve continued member and participation growth by commencing with a small and intimate community and gradually expanding the collection of movie/series chatrooms as the community grows (and becomes, perhaps, less intimate due to the increased number of users), thereby allowing for the users to be spread out across multiple chatrooms. 
 
 ---
 #### FUNCTIONALITY/ FEATURES
@@ -38,13 +38,17 @@ Authentication and Authorisation can be handled using the following gems:
 - Devise 
 - Rolify
 
+###### Forms
+- Netlify forms
+- Consider using Simple Form and Bootstrap
+
 ###### Movie/Series Cards: Early Beginnings version
 The home page includes one movie/series card for the month. 
 Each movie/series card will contain the:
 - title
 - image 
 
-The movie data can be accessed from an API such as the Movie Database (IMDB Alternative). The RAPID API version currently has a basic price plan of $0.00 per month that inludes 1,000 requests per day and is available at: https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative/
+The initial title and image can be saved in the source code as a placeholder. Thereafter, the movie data can be accessed from an API such as the Movie Database (IMDB Alternative). The RAPID API version currently has a basic price plan of $0.00 per month that inludes 1,000 requests per day and is available at: https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative/
 
 ###### Chatroom, CRUD & Authorisation: Early Beginnings version
 Users can post, edit and delete their own messages.
@@ -68,6 +72,9 @@ Styling will include the following:
 1.	Icons: https://fontawesome.com
 2.	Google fonts: https://fonts.google.com/
 3.  Background image/s from unsplash: https://unsplash.com/
+
+###### Database 
+![Databse](docs/erd.PNG)
 
 ---
 
@@ -102,6 +109,8 @@ Users can view all of their own messages. *** for each chatroom or total?
 Each movie/series can have two chatrooms:
 - with spoilers
 - without spoilers
+
+Chatrooms can contain many messages. There should be a scroll bar or a hide/show more button so that only the most recent messages are visible but that the user may still look at older messages should they choose to do so.
 
 ###### Contact & Attribution: Expansion version
 As above but instead of including an admin email address, users can submit a contact form. 
@@ -170,7 +179,7 @@ Proposed version control:[^1]
 4.    Commit changes on local
 5.    (a) When the central repository has changed, developers need to merge their local with the central repository by pulling the changes from the main branch and merging ` $git merge master `
 6.    Resolve conflicts locally.
-7.    Push changes to the central repository ` $push origin Developername`
+7.    Push changes to the central repository ` $ git push origin Developername`. Then merge the developer's branch into the central repository master branch (you can also do this by following the prompts in github)
 
 Or instead of 5(a), the developer may merge their branch on github (without updating their main branch) by pushing their branch to github, making a pull request on github (from the main branch to their branch) and if there are no conflicts, merge. Then update local main from github main by making a pull request.
 [^1]: This source control flow was used by Team Hack Overflow, with special credit to Roba Elshazly.
@@ -188,9 +197,11 @@ https://edstem.org/courses/4966/lessons/12821/slides/91793
 Provides multiple user stories that use ‘persona, what and why’ that outline meaningful features of project. Shows evidence of user story revision and refinement. 
 
 ### R5: WIREFRAMES
-Provides wireframes that show exceptional planning of project flow and structure including but not limited to space distribution, content prioritisation, intended actions, functions, relationships between screens. 
+Wireframes were prepared using Balsamiq Wireframes.
 
-- Balsamiq Wireframes
+**A. Early Beginnings version**
+![Core app wireframes: Early Beginnings version](docs/draft_wireframes.png)
+
 
 ### R6: TRELLO
 https://trello.com/b/VLtFLtdT/full-stack-app
