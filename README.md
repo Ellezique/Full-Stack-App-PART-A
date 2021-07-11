@@ -64,6 +64,7 @@ All website visitors can access the contact and attribution page.
 
 The AftreCredits head office address will be accompanied by a location map.  The interactive map of the business address will have a marker showing the location. Users can interact with the map.
 The map data can be provided by an API such as Bing Maps API, available at https://www.bingmapsportal.com/ 
+Alternatively, consider using Google Maps API.
 
 This page will also include links to the creators github accounts. An admin email address will be included ot allow users to contact an admin directly.
 
@@ -201,7 +202,11 @@ Wireframes were prepared using Balsamiq Wireframes.
 
 **A. Early Beginnings version**
 ![Core app wireframes: Early Beginnings version](docs/draft_wireframes.png)
+<br>
 
+**B. Expansion version**
+
+![Expanded app wireframes: Expansion version](docs/expanded_app_wireframes.png)
 
 ### R6: TRELLO
 https://trello.com/b/VLtFLtdT/full-stack-app
