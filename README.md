@@ -170,7 +170,7 @@ Proposed version control:[^1]
 4.    Commit changes on local
 5.    (a) When the central repository has changed, developers need to merge their local with the central repository by pulling the changes from the main branch and merging ` $git merge master `
 6.    Resolve conflicts locally.
-7.    Push changes to the central repository ` $push origin Developername`
+7.    Push changes to the central repository ` $ git push origin Developername`. Then merge the developer's branch into the central repository master branch (you can also do this by following the prompts in github)
 
 Or instead of 5(a), the developer may merge their branch on github (without updating their main branch) by pushing their branch to github, making a pull request on github (from the main branch to their branch) and if there are no conflicts, merge. Then update local main from github main by making a pull request.
 [^1]: This source control flow was used by Team Hack Overflow, with special credit to Roba Elshazly.
