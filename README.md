@@ -209,5 +209,12 @@ Wireframes were prepared using Balsamiq Wireframes.
 ![Expanded app wireframes: Expansion version](docs/expanded_app_wireframes.png)
 
 ### R6: TRELLO
-https://trello.com/b/VLtFLtdT/full-stack-app
+The Trello board used for planning this project is available online at: https://trello.com/b/VLtFLtdT/aftercredits
+
 Simple and clear standards for planning methodology chosen and adhered to.
+
+Project management - in a nutshell - has no single perfect technique or process or procedure. The best procedure you can follow is one that you'll stick to.
+You'll commonly hear about project management methodologies like "waterfall" and "agile", and you can find overviews of those here:
+•	Waterfall methodology: https://www.projectmanager.com/waterfall-methodology 
+•	Agile methodology: https://www.atlassian.com/agile 
+•	Quick comparison of the two: https://project-management.com/agile-vs-waterfall/ 
