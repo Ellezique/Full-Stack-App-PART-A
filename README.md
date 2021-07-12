@@ -187,7 +187,7 @@ B. DEVELOPMENT
 8. When the central repository (GitHub) has changed, developers need to **pull the GitHub changes into their local** and can do this with `$git pull origin master`. The developer can incorporate changes into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`.
 9.    **Resolve conflicts locally in VS Code** before you push to GitHub.
 10.    When you are ready to **push your changes to GitHub** from your developer branch `$ git push origin Developername`.
-11. Your branch will now be visible in GitHub and you can click on it. You can then click on "Pull Request" and "Send Pull Request". 
+11. Your branch will now be visible in GitHub and you can click on it. You can then follow the prompts by clicking on "Pull Request" and "Send Pull Request". Once merged, you may delete the `Developername` banch in Github.
 
 
 
