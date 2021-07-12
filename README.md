@@ -173,17 +173,23 @@ The target audience includes users who:
 ##### Source Control 
 - **Git**: [Git](https://git-scm.com/) is a version control system for tracking changes across a set of files and to coordinate work between programmers working collaboratively on developing source code.
 
-Proposed version control:[^1] 
-1.    Create app in central repository on Github
-2.    Clone to local
-3.    Developers checkout their own branch   `$git checkout -b Developername`
-4.    Commit changes on local
-5.    (a) When the central repository has changed, developers need to merge their local with the central repository by pulling the changes from the main branch and merging ` $git merge master `
-6.    Resolve conflicts locally.
-7.    Push changes to the central repository ` $ git push origin Developername`. Then merge the developer's branch into the central repository master branch (you can also do this by following the prompts in github)
+###### BASIC SHARED REPOSITORY WORKFLOW
+A. SETUP
+1.    **Create app in central repository on GitHub.** Both developers will have access to push and pull- Developers must do all their work on a different branch to master and must NEVER commit to the master branch directly.
+2.    **Each developer clones the main GitHub repository to their local.** Developers are working in VS Code.
+3.    In local, developers create and checkout their own branch:  `$git checkout -b Developername`. 
+4. They can then switch between branches using `$ git checkout master` or `$ git checkout Developername`. But they should only code on their Developername branch.
 
-Or instead of 5(a), the developer may merge their branch on github (without updating their main branch) by pushing their branch to github, making a pull request on github (from the main branch to their branch) and if there are no conflicts, merge. Then update local main from github main by making a pull request.
-[^1]: This source control flow was used by Team Hack Overflow, with special credit to Roba Elshazly.
+B. DEVELOPMENT
+
+5. Developers should do all their work on their own branch and NEVER commit to the central repositry (GitHub) master branch directly. Developers should work only on their `Developername` branch. `$ git branch` to see what branch you are on. If you are not on your branch `$ git checkout Developername`
+7.  **Code in your Developername branch** and then stage changes in local `$ git add .` and commit changes with `$ git commit -m "meaningful commit description"`.
+8. When the central repository (GitHub) has changed, developers need to **pull the GitHub changes into their local** and can do this with `$git pull origin master`. The developer can incorporate changes into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`.
+9.    **Resolve conflicts locally in VS Code** before you push to GitHub.
+10.    When you are ready to **push your changes to GitHub** from your developer branch `$ git push origin Developername`.
+11. Your branch will now be visible in GitHub and you can click on it. You can then click on "Pull Request" and "Send Pull Request". 
+
+
 
 ### R2: DATAFLOW DIAGRAM
 
@@ -209,5 +215,12 @@ Wireframes were prepared using Balsamiq Wireframes.
 ![Expanded app wireframes: Expansion version](docs/expanded_app_wireframes.png)
 
 ### R6: TRELLO
-https://trello.com/b/VLtFLtdT/full-stack-app
+The Trello board used for planning this project is available online at: https://trello.com/b/VLtFLtdT/aftercredits
+
 Simple and clear standards for planning methodology chosen and adhered to.
+
+Project management - in a nutshell - has no single perfect technique or process or procedure. The best procedure you can follow is one that you'll stick to.
+You'll commonly hear about project management methodologies like "waterfall" and "agile", and you can find overviews of those here:
+•	Waterfall methodology: https://www.projectmanager.com/waterfall-methodology 
+•	Agile methodology: https://www.atlassian.com/agile 
+•	Quick comparison of the two: https://project-management.com/agile-vs-waterfall/ 
