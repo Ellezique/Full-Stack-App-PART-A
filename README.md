@@ -164,6 +164,10 @@ The target audience includes users who:
 - **Rspec**: [Rspec](https://rspec.info/) is a meta-gem used for testing in Ruby on Rails.
 - **Heroku**: [Heroku](https://www.heroku.com/) is a cloud platform that supports Ruby on Rails. It will be used to deploy the Ruby on Rails repository (back-end/ server-side). The service used for this project is free of charge.
 
+##### User Testing (Development and Production)
+- Consider either manual testing (video recording or excel spreadsheet); or
+- Cypress
+
 ##### Database
 - **PostgreSQL**: [PostgreSQL](https://www.postgresql.org/) is a free relational database management system.
 
