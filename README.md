@@ -34,9 +34,9 @@ Users can sign up and then log in to access the chatroom to discuss the movie/se
 - password
 
 ###### Authentication and Authorisation: Early Beginnings version
-Authentication and Authorisation can be handled using the following gems:
-- Devise 
-- Rolify
+Authentication and Authorisation can be handled using:
+- Knock
+- JWT
 
 ###### Forms
 - Netlify forms
@@ -73,6 +73,8 @@ Styling will include the following:
 1.	Icons: https://fontawesome.com
 2.	Google fonts: https://fonts.google.com/
 3.  Background image/s from unsplash: https://unsplash.com/
+
+Each JavaScript component will have its own css stylesheet e.g. Navbar.js and Navbar.css
 
 ###### Database 
 ![Databse](docs/erd.PNG)
@@ -154,7 +156,7 @@ The target audience includes users who:
 
 ##### Front-end/client side
 - **React.js**: [React](https://reactjs.org/) is a front-end (client side) **JavaScript** library used to build user interfaces and components.
-- **Yarn**: [Yarn](https://yarnpkg.com/) is a [package manager](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/) for JavaScript (client side) that will be used for this project.
+- **Yarn**: [Yarn](https://yarnpkg.com/) is a [package manager](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/) for JavaScript (client side) that will be used for this project. It is prefereable to use yarn with React apps. The most stable version currently is 1.22.5, which will be used for this project. To add and remove packages, `yarn add [package]` and `yarn remove [package]`. Install all project dependencies using `yarn install`. Dependencies can be upgraded to the currentl stable versions by running `yarn upgrade`. All dependencies and configuration for the React side of AfterCredits will be specified in the package.json file.
 - **Jest**: [Jest](https://jestjs.io/) is a testing framework that works with React projects (testing front-end).
 - **Netlify**: [Netlify](https://www.netlify.com/) will be used to deploy the front-end React repository. The service used for this project is free of charge.
 
