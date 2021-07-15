@@ -216,7 +216,7 @@ As a User/Admin, I want my posts to be there when I return to the chatroom so I 
 
 As a User, I dont want other users to be able to edit/delete my posts unless they are an admin doing it for legitimate reasons so I know what I post is safeguarded and is my own content.
 
-As an Admin, I want to be able to edit/delete other user's posts so I can moderate the conversation if I deem it necessary.
+As an Admin, I want to be able to delete other user's posts so I can moderate the conversation if I deem it necessary.
 
 
 Provides multiple user stories that use ‘persona, what and why’ that outline meaningful features of project. Shows evidence of user story revision and refinement. 
