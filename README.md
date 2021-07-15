@@ -1,5 +1,5 @@
 
-# T3A2-A - Full Stack App 
+# T3A2-A  Full Stack App 
 ## Part A
 ## AfterCredits
 #### By: Chris Gibs & Gizelle van Zyl
