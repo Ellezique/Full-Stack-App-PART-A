@@ -134,7 +134,8 @@ Styling will include the following:
 - CRUD: Admins read/update/delete functions over users. 
 - When creating a card, have images etc instructing user to get the imdb id from IMDB's website.
 - Handle inappropriate content (beyond admin can delete).
-###### *******  Perhaps the sign in should include line stating all users are over the age of 18 when signing up. ### Sterlization
+###### *******  Perhaps the sign in should include line stating all users are over the age of 18 when signing up. 
+### Data Sanitisation and Sterlization
 
 ---
 
