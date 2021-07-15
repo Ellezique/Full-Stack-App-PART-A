@@ -202,7 +202,7 @@ B. DEVELOPMENT
 
 
 ### R2: DATAFLOW DIAGRAM
-
+![Dataflow Diagram](docs/DataflowDiagramT3A2-A.png)
 Provides dataflow diagram(s) that strictly follow the standard convensions to clearly identify the processes within your application. Clearly depicts where data is coming from, where it is going and how it is being stored. 
 https://edstem.org/courses/4966/lessons/12821/slides/91792 
 
@@ -211,6 +211,26 @@ Shows almost flawless understanding of the high level structure of the app
 https://edstem.org/courses/4966/lessons/12821/slides/91793 
 
 ### R4: USER STORIES
+
+As a <user>,
+I want to <action>,
+so/because <reason>
+
+As a movie/tv-series enthusiast, I want to go into chatrooms based around my favourite films/shows with others so I can share my opinions and gain insight from our discussions.
+
+As a non-registered User, I want to be able to view the site without having to log in so I can see what it is all about before I go through the process of creating an account.
+
+As a User, I dont want other users to be able to edit/delete my posts unless they are an admin doing it for legitimate reasons so I know what I post is safeguarded and is my own content.
+
+As an Admin, I want to be able to delete other user's posts so I can moderate the conversation if I deem it necessary.
+
+As an Admin, I want to be able to make/edit/delete movie/series cards for Users to view and enter it's own chatroom so I can enable users to get the conversations on that particular movie/series started.
+
+As a User/Admin, I want to be able to make/edit/delete my own posts so I can share my opinions about a movie/series with others.
+
+As a User/Admin, I want my posts to be there when I return to the chatroom so I can continue the conversation later.
+
+
 Provides multiple user stories that use ‘persona, what and why’ that outline meaningful features of project. Shows evidence of user story revision and refinement. 
 
 ### R5: WIREFRAMES
