@@ -50,6 +50,8 @@ Each movie/series card will contain the:
 
 The initial title and image can be saved in the source code as a placeholder. Thereafter, the movie data can be accessed from an API such as the Movie Database (IMDB Alternative). The RAPID API version currently has a basic price plan of $0.00 per month that inludes 1,000 requests per day and is available at: https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative/
 
+- CRUD: Admin role users create movie/series cards. Include link to IMDB etc.
+
 ###### Chatroom, CRUD & Authorisation: Early Beginnings version
 Users can post, edit and delete their own messages.
 Admin role users can additionally delete anyone's message.
@@ -128,9 +130,11 @@ Styling will include the following:
 
 ###### Additional features for future development (the nice-to-have-but-not-included list)
 - A search feature so that users can search for a movie or series by genre, actor, rating etc. This feature will not be pursued in the current project. It would require database design changes and features that are beyond the scope of the current project.
-- Admin role users or all users can add their own movie/series cards.
 
-###### ******* We should discuss if or how to handle inappropriate content (beyond admin can delete). Perhaps the sign in should include line stating all users are over the age of 18 when signing up.
+- CRUD: Admins read/update/delete functions over users. 
+- When creating a card, have images etc instructing user to get the imdb id from IMDB's website.
+- Handle inappropriate content (beyond admin can delete).
+###### *******  Perhaps the sign in should include line stating all users are over the age of 18 when signing up. ### Sterlization
 
 ---
 
