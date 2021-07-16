@@ -186,10 +186,13 @@ The target audience includes users who:
 ###### BASIC SHARED REPOSITORY WORKFLOW
 A. SETUP
 1.    **Create app in central repository on GitHub.** Both developers will have access to push and pull- Developers must do all their work on a different branch to master and must NEVER commit to the master branch directly.
+
 2.    **Each developer clones the main GitHub repository to their local.** Developers are working in VS Code.
+
 3.    In local, developers create and checkout their own branch:  `$git checkout -b Developername`. 
 
 B. DEVELOPMENT
+
 4. Developers should do all their work on their own branch and NEVER commit to the central repositry (GitHub) master branch directly. Developers should work only on their `Developername` branch. `$ git branch` to see what branch you are on. If you are not on your branch `$ git checkout Developername`
 
 5.  **Code in your Developername branch** and then stage changes in local `$ git add .` and commit changes with `$ git commit -m "meaningful commit description"`.
@@ -245,8 +248,6 @@ Wireframes were prepared using Balsamiq Wireframes.
 ![Expanded app wireframes: Expansion version](docs/expanded_app_wireframes.png)
 
 ### R6: TRELLO
-The Trello board used for planning this project is available online at: https://trello.com/b/VLtFLtdT/aftercredits
-
 Simple and clear standards for planning methodology chosen and adhered to.
 
 Project management - in a nutshell - has no single perfect technique or process or procedure. The best procedure you can follow is one that you'll stick to.
@@ -254,3 +255,24 @@ You'll commonly hear about project management methodologies like "waterfall" and
 •	Waterfall methodology: https://www.projectmanager.com/waterfall-methodology 
 •	Agile methodology: https://www.atlassian.com/agile 
 •	Quick comparison of the two: https://project-management.com/agile-vs-waterfall/ 
+
+The aim of this project is to build the core app (early beginnings) first and then incorporate features from the expansion version. The aim is not to deliver the full expansion version, but rather to deliver extra features on the core app. 
+
+An Agile methodology will be used in this project. This methodology allows for changing the requirements at any time to adapt to challenges encountered and to incorporate additional features as time permits. The team will manage the project jointly rather than appointing a single project manager. Testing will be performed concurrently with development. 
+
+The Trello board used for planning this project is available online at: https://trello.com/b/VLtFLtdT/aftercredits
+
+###### Trello Board and Cards Overview
+Cards are arranged by 4 main categories:
+- Part A (pink)
+- To Do - Back End (cyan)
+- To Do - Front End (yellow)
+- Other Criteria Part B (orange)
+
+![Trello Board and Cards](docs/trello1.PNG)
+
+###### PART A: Task Allocation
+![Part A Task Allocation](docs/trello2.PNG)
+###### PART A: Task
+![](docs/trello3.PNG)
+![](docs/trello4.PNG)
