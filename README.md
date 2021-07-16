@@ -182,7 +182,7 @@ A. SETUP
 
 B. DEVELOPMENT
 
-5. Developers should do all their work on their own branch and NEVER commit to the central repositry (GitHub) master branch directly. Developers should work only on their `Developername` branch. `$ git branch` to see what branch you are on. If you are not on your branch `$ git checkout Developername`
+5. Developers should do all their work on their own branch and NEVER commit to the central repository (GitHub) master branch directly. Developers should work only on their `Developername` branch. `$ git branch` to see what branch you are on. If you are not on your branch `$ git checkout Developername`
 7.  **Code in your Developername branch** and then stage changes in local `$ git add .` and commit changes with `$ git commit -m "meaningful commit description"`.
 8. When the central repository (GitHub) has changed, developers can **pull the GitHub changes into their local** master branch and can do this with `$git pull origin master`. The developer can incorporate changes from the GitHub repo into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`.
 9.    **Resolve conflicts locally in VS Code** before you push to GitHub.
@@ -193,10 +193,13 @@ B. DEVELOPMENT
 
 ### R2: DATAFLOW DIAGRAM
 ![Dataflow Diagram](docs/DataflowDiagramT3A2-A.png)
+
 Provides dataflow diagram(s) that strictly follow the standard convensions to clearly identify the processes within your application. Clearly depicts where data is coming from, where it is going and how it is being stored. 
 https://edstem.org/courses/4966/lessons/12821/slides/91792 
 
 ### R3: APPLICATION ARCHITECTURE DIAGRAM
+![Application Architecture Diagram](docs/ApplicationArchitectureDiagramT3A2-A.png)
+
 Shows almost flawless understanding of the high level structure of the app
 https://edstem.org/courses/4966/lessons/12821/slides/91793 
 
