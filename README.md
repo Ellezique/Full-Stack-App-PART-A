@@ -67,7 +67,7 @@ All website visitors can access the contact page.
 
 An Admin email address will be included to allow users to contact an admin directly.
 
-The AftreCredits head office address will be listed and accompanied by a static location map. 
+The AfterCredits head office address will be listed and accompanied by a static location map. 
 
 ###### Styling, design and aesthetics: Early Beginnings version
 Styling will include the following:
