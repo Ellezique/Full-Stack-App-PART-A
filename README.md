@@ -187,10 +187,13 @@ The target audience includes users who:
 ###### BASIC SHARED REPOSITORY WORKFLOW
 A. SETUP
 1.    **Create app in central repository on GitHub.** Both developers will have access to push and pull- Developers must do all their work on a different branch to master and must NEVER commit to the master branch directly.
+
 2.    **Each developer clones the main GitHub repository to their local.** Developers are working in VS Code.
+
 3.    In local, developers create and checkout their own branch:  `$git checkout -b Developername`. 
 
 B. DEVELOPMENT
+
 4. Developers should do all their work on their own branch and NEVER commit to the central repositry (GitHub) master branch directly. Developers should work only on their `Developername` branch. `$ git branch` to see what branch you are on. If you are not on your branch `$ git checkout Developername`
 
 5.  **Code in your Developername branch** and then stage changes in local `$ git add .` and commit changes with `$ git commit -m "meaningful commit description"`.
