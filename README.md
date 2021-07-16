@@ -125,7 +125,7 @@ As above but instead of including an admin email address, users can submit a con
 The interactive map of the business address will have a marker showing the location. Users can interact with the map.
 The map data can be provided by an API such as Bing Maps API, available at https://www.bingmapsportal.com/ or alternatively, the Google Maps API.
 
-This page will also include links to the developers GitHub accounts.
+This page will also include links to the developers' GitHub accounts.
 
 ###### Styling, design and aesthetics: Expansion version
 Styling could include the following:
