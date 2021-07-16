@@ -1,6 +1,5 @@
 
-# T3A2-A - Full Stack App 
-## Part A
+# T3A2-A  Full Stack App (PART A)
 ## AfterCredits
 #### By: Chris Gibs & Gizelle van Zyl
 ___
@@ -34,9 +33,9 @@ Users can sign up and then log in to access the chatroom to discuss the movie/se
 - password
 
 ###### Authentication and Authorisation: Early Beginnings version
-Authentication and Authorisation can be handled using the following gems:
-- Devise 
-- Rolify
+Authentication and Authorisation can be handled using:
+- Knock
+- JWT
 
 ###### Forms
 - Netlify forms
@@ -49,6 +48,8 @@ Each movie/series card will contain the:
 - image 
 
 The initial title and image can be saved in the source code as a placeholder. Thereafter, the movie data can be accessed from an API such as the Movie Database (IMDB Alternative). The RAPID API version currently has a basic price plan of $0.00 per month that inludes 1,000 requests per day and is available at: https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative/
+
+- CRUD: Admin role users create movie/series cards. Include link to IMDB etc.
 
 ###### Chatroom, CRUD & Authorisation: Early Beginnings version
 Users can post, edit and delete their own messages.
@@ -73,6 +74,8 @@ Styling will include the following:
 1.	Icons: https://fontawesome.com
 2.	Google fonts: https://fonts.google.com/
 3.  Background image/s from unsplash: https://unsplash.com/
+
+Each JavaScript component will have its own css stylesheet e.g. Navbar.js and Navbar.css
 
 ###### Database 
 ![Databse](docs/erd.PNG)
@@ -126,9 +129,12 @@ Styling will include the following:
 
 ###### Additional features for future development (the nice-to-have-but-not-included list)
 - A search feature so that users can search for a movie or series by genre, actor, rating etc. This feature will not be pursued in the current project. It would require database design changes and features that are beyond the scope of the current project.
-- Admin role users or all users can add their own movie/series cards.
 
-###### ******* We should discuss if or how to handle inappropriate content (beyond admin can delete). Perhaps the sign in should include line stating all users are over the age of 18 when signing up.
+- CRUD: Admins read/update/delete functions over users. 
+- When creating a card, have images etc instructing user to get the imdb id from IMDB's website.
+- Handle inappropriate content (beyond admin can delete).
+###### *******  Perhaps the sign in should include line stating all users are over the age of 18 when signing up. 
+### Data Sanitisation and Sterlization
 
 ---
 
@@ -154,7 +160,7 @@ The target audience includes users who:
 
 ##### Front-end/client side
 - **React.js**: [React](https://reactjs.org/) is a front-end (client side) **JavaScript** library used to build user interfaces and components.
-- **Yarn**: [Yarn](https://yarnpkg.com/) is a [package manager](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/) for JavaScript (client side) that will be used for this project.
+- **Yarn**: [Yarn](https://yarnpkg.com/) is a [package manager](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/) for JavaScript (client side) that will be used for this project. It is prefereable to use yarn with React apps. The most stable version currently is 1.22.5, which will be used for this project. To add and remove packages, `yarn add [package]` and `yarn remove [package]`. Install all project dependencies using `yarn install`. Dependencies can be upgraded to the currentl stable versions by running `yarn upgrade`. All dependencies and configuration for the React side of AfterCredits will be specified in the package.json file.
 - **Jest**: [Jest](https://jestjs.io/) is a testing framework that works with React projects (testing front-end).
 - **Netlify**: [Netlify](https://www.netlify.com/) will be used to deploy the front-end React repository. The service used for this project is free of charge.
 
@@ -163,6 +169,10 @@ The target audience includes users who:
 - **RubyGems**: [Ruby Gems](https://rubygems.org/) is a package management framework for Ruby and is used to distribute Ruby programs and libraries. RubyGems is a tool used to install gems.
 - **Rspec**: [Rspec](https://rspec.info/) is a meta-gem used for testing in Ruby on Rails.
 - **Heroku**: [Heroku](https://www.heroku.com/) is a cloud platform that supports Ruby on Rails. It will be used to deploy the Ruby on Rails repository (back-end/ server-side). The service used for this project is free of charge.
+
+##### User Testing (Development and Production)
+- Consider either manual testing (video recording or excel spreadsheet); or
+- Cypress
 
 ##### Database
 - **PostgreSQL**: [PostgreSQL](https://www.postgresql.org/) is a free relational database management system.
@@ -178,18 +188,15 @@ A. SETUP
 1.    **Create app in central repository on GitHub.** Both developers will have access to push and pull- Developers must do all their work on a different branch to master and must NEVER commit to the master branch directly.
 2.    **Each developer clones the main GitHub repository to their local.** Developers are working in VS Code.
 3.    In local, developers create and checkout their own branch:  `$git checkout -b Developername`. 
-4. They can then switch between branches using `$ git checkout master` or `$ git checkout Developername`. But they should only code on their Developername branch.
 
 B. DEVELOPMENT
+4. Developers should do all their work on their own branch and NEVER commit to the central repositry (GitHub) master branch directly. Developers should work only on their `Developername` branch. `$ git branch` to see what branch you are on. If you are not on your branch `$ git checkout Developername`
 
-5. Developers should do all their work on their own branch and NEVER commit to the central repository (GitHub) master branch directly. Developers should work only on their `Developername` branch. `$ git branch` to see what branch you are on. If you are not on your branch `$ git checkout Developername`
-7.  **Code in your Developername branch** and then stage changes in local `$ git add .` and commit changes with `$ git commit -m "meaningful commit description"`.
-8. When the central repository (GitHub) has changed, developers can **pull the GitHub changes into their local** master branch and can do this with `$git pull origin master`. The developer can incorporate changes from the GitHub repo into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`.
-9.    **Resolve conflicts locally in VS Code** before you push to GitHub.
-10.    When you are ready to **push your changes to GitHub** from your developer branch `$ git push origin Developername`.
-11. Your branch will now be visible in GitHub and you can click on it. You can then follow the prompts by clicking on "Pull Request" and "Send Pull Request". Once merged, you may delete the `Developername` banch in Github.
+5.  **Code in your Developername branch** and then stage changes in local `$ git add .` and commit changes with `$ git commit -m "meaningful commit description"`.
 
+6. The developer can incorporate changes from the GitHub repo into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`. They can pull using `$ git pull `. **Resolve conflicts locally in VS Code** before you push to GitHub.
 
+7. Developers can **push their changes to GitHub** from their developer branch `$ git push origin Developername`. Developers can then delete their branch when it has been merged with the Github central master branch. .  
 
 ### R2: DATAFLOW DIAGRAM
 ![Dataflow Diagram](docs/DataflowDiagramT3A2-A.png)
