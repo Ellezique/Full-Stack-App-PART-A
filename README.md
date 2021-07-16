@@ -191,8 +191,11 @@ A. SETUP
 
 B. DEVELOPMENT
 4. Developers should do all their work on their own branch and NEVER commit to the central repositry (GitHub) master branch directly. Developers should work only on their `Developername` branch. `$ git branch` to see what branch you are on. If you are not on your branch `$ git checkout Developername`
+
 5.  **Code in your Developername branch** and then stage changes in local `$ git add .` and commit changes with `$ git commit -m "meaningful commit description"`.
+
 6. The developer can incorporate changes from the GitHub repo into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`. They can pull using `$ git pull `. **Resolve conflicts locally in VS Code** before you push to GitHub.
+
 7. Developers can **push their changes to GitHub** from their developer branch `$ git push origin Developername`. Developers can then delete their branch when it has been merged with the Github central master branch. .  
 
 ### R2: DATAFLOW DIAGRAM
