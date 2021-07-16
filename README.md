@@ -7,13 +7,13 @@ ___
 ### R1: DESCRIPTION OF WEBSITE
 
 #### PURPOSE 
-AfterCredits is a movie chat app. There are two proposed versions of the app:
+AfterCredits is a movie discussion app for people over the age of 18. There are two proposed versions of the app:
 
 **A. Early Beginnings version:** The initial core app version is designed to build user community. There will be one movie or series for the month, similar to a book club. Community users can see what the select movie/series is so that they can have a chance to watch it if they haven't seen it yet. When they are ready, they can join the chatroom to discuss the movie/series with other users.
 
-**B. Expansion version:** The expanded app will have multiple movies/series, each with their own chatroom. Users can join a chatroom to discuss any movie or series of their liking whenever they wish, rather than waiting for a single monthly selection. 
+**B. Expansion version:** The expanded app will have multiple movies/series, each with their own chatroom. Users can join a chatroom to discuss any listed movie or series of their liking whenever they wish, rather than waiting for a single monthly selection. 
 
-The development plan is to build the Early Beginnings version first and to then commence incorporating as many features as possible whilst working towards building the total Expansion version. It is fairly unlikely that the entire Expansion version will be completed within the relevant development timeframe. It is anticipated that the final product will be an Early Beginnings version incorporating some additional features that have been proposed for the Expansion version. 
+The development plan is to build the Early Beginnings version first (core app) and to then commence incorporating features from the Expansion version. It is fairly unlikely that the entire Expansion version will be completed within the relevant development timeframe. It is anticipated that the final product will be an Early Beginnings version incorporating some additional features that have been proposed for the Expansion version. 
 
 From a real life marketing perspective, the plan would be to achieve continued member and participation growth by commencing with a small and intimate community and gradually expanding the collection of movie/series chatrooms as the community grows (and becomes, perhaps, less intimate due to the increased number of users), thereby allowing for the users to be spread out across multiple chatrooms. 
 
@@ -33,41 +33,41 @@ Users can sign up and then log in to access the chatroom to discuss the movie/se
 - password
 
 ###### Authentication and Authorisation: Early Beginnings version
-Authentication and Authorisation can be handled using:
+Authentication and Authorisation will be handled using:
 - Knock
 - JWT
 
-###### Forms
-- Netlify forms
-- Consider using Simple Form and Bootstrap
+There will be two user roles: 
+- Admin
+- User
 
 ###### Movie/Series Cards: Early Beginnings version
 The home page includes one movie/series card for the month. 
-Each movie/series card will contain the:
+The movie/series card will contain the:
 - title
-- image 
+- poster (image) 
 
 The initial title and image can be saved in the source code as a placeholder. Thereafter, the movie data can be accessed from an API such as the Movie Database (IMDB Alternative). The RAPID API version currently has a basic price plan of $0.00 per month that inludes 1,000 requests per day and is available at: https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative/
+Once the API is implemented, the imdb_id can be stored in the database when the card is created. That imdb_id can then be used to fetch the title and poster(an image url) from the API. 
 
-- CRUD: Admin role users create movie/series cards. Include link to IMDB etc.
+A "Show more" button can then toggle additional data from the API e.g. a movie or series description.
 
-###### Chatroom, CRUD & Authorisation: Early Beginnings version
-Users can post, edit and delete their own messages.
-Admin role users can additionally delete anyone's message.
+###### Chatroom
+Each movie/series card contains its own chatroom relevant to that movie/series.
+
+Messages will have full CRUD functionality. Users can post, edit and delete their own messages. Admin role users can additionally delete anyone's message to ensure a means for removing inappropriate content.  
 
 Each message will include:
 - username
 - message
 - posting time and date
 
-###### Contact & Attribution: Early Beginnings version
-All website visitors can access the contact and attribution page.
+###### Contact Page: Early Beginnings version
+All website visitors can access the contact page.
 
-The AftreCredits head office address will be accompanied by a location map.  The interactive map of the business address will have a marker showing the location. Users can interact with the map.
-The map data can be provided by an API such as Bing Maps API, available at https://www.bingmapsportal.com/ 
-Alternatively, consider using Google Maps API.
+An Admin email address will be included to allow users to contact an admin directly.
 
-This page will also include links to the creators github accounts. An admin email address will be included ot allow users to contact an admin directly.
+The AftreCredits head office address will be listed and accompanied by a static location map. 
 
 ###### Styling, design and aesthetics: Early Beginnings version
 Styling will include the following:
@@ -78,7 +78,7 @@ Styling will include the following:
 Each JavaScript component will have its own css stylesheet e.g. Navbar.js and Navbar.css
 
 ###### Database 
-![Databse](docs/erd.PNG)
+![Database](docs/erd.PNG)
 
 ---
 
@@ -91,12 +91,14 @@ Each JavaScript component will have its own css stylesheet e.g. Navbar.js and Na
 ![Expanded App Sitemap](docs/expanded_app.PNG)
 
 ###### Log in/Sign up: Expansion version
-As above. An expansion feature could enable users to select an avatar image or upload their own image.
+As above. An expansion feature could enable users to select an avatar image (a limited number of images posing no storage issues) or upload their own image (requiring a storage solution such as Cloudinary).
 
 ###### Authentication and Authorisation: Expansion version
 As above.
 
 ###### Movie/Series Cards: Expansion version
+The Cards feature should have full CRUD functionality so that an Admin user can change the monthly movie/series card and add additional cards as the site grows towards the Expansion version. 
+
 The home page includes multiple movie/series cards.
 Each home page movie/series card will contain the:
 - title
@@ -104,54 +106,53 @@ Each home page movie/series card will contain the:
 
 Users may click on a card to view additional movie information, which may include any of the following: Year, Metascore Rating, IMDB rating, Release date, Runtime, Genre, Directors, Writers, Actors, Plot, Awards etc.
 
-###### Chatroom, CRUD & Authorisation: Expansion version
+###### Chatroom: Expansion version
 As above. 
 
-Additionally user messages can display with the user chosen avatar or images. Users can click on a username to see all of their messages in a chatroom.*** for each chatroom or total?
-Users can view all of their own messages. *** for each chatroom or total?
+Additionally user messages can display with the user's chosen avatar or images. Users can click on a username to see all of their messages.
 
 Each movie/series can have two chatrooms:
 - with spoilers
 - without spoilers
+A spoilers boolean could be added to the Cards table to distinguish spoiler and no-spoiler messages. An additional button will be needed to allow users to select whether they want to view the spoiler or no-spoiler chatroom.
 
-Chatrooms can contain many messages. There should be a scroll bar or a hide/show more button so that only the most recent messages are visible but that the user may still look at older messages should they choose to do so.
+Chatrooms can contain many messages. There could be a scroll bar or a hide/show more button so that only the most recent messages are visible but that the user may still look at older messages should they choose to do so.
 
-###### Contact & Attribution: Expansion version
+###### Contact: Expansion version
 As above but instead of including an admin email address, users can submit a contact form. 
-- The contact form will be handled by Netlify forms.
+- The contact form could be handled using Netlify forms.
+
+The interactive map of the business address will have a marker showing the location. Users can interact with the map.
+The map data can be provided by an API such as Bing Maps API, available at https://www.bingmapsportal.com/ or alternatively, the Google Maps API.
+
+This page will also include links to the developers GitHub accounts.
 
 ###### Styling, design and aesthetics: Expansion version
-Styling will include the following:
+Styling could include the following:
 1.	Icons: https://fontawesome.com
 2.	Google fonts: https://fonts.google.com/
-3. Background image/s from unsplash: https://unsplash.com/
+3.  Background image/s from unsplash: https://unsplash.com/
 4.  Animated background: https://greensock.com/
 
 ###### Additional features for future development (the nice-to-have-but-not-included list)
 - A search feature so that users can search for a movie or series by genre, actor, rating etc. This feature will not be pursued in the current project. It would require database design changes and features that are beyond the scope of the current project.
-
-- CRUD: Admins read/update/delete functions over users. 
-- When creating a card, have images etc instructing user to get the imdb id from IMDB's website.
-- Handle inappropriate content (beyond admin can delete).
-###### *******  Perhaps the sign in should include line stating all users are over the age of 18 when signing up. 
-### Data Sanitisation and Sterlization
+- Full CRUD functionality over users so that users may edit their own details (and so that Admin can delete users). 
+- Thorough solutions to moderating and handling user input. More thorough data sanitisation and sterilization.
 
 ---
-
-
-
 
 #### TARGET AUDIENCE
 
 **A. Early Beginnings version:**
 The target audience includes users who:
 - want to join a monthly movie/series club
-- to discuss or read comments about a movie/series 
+- want to discuss or read comments about a movie/series
+- are at least 18 years old (movies and series have classifications and age restrictions which vary between jurisdictions, therefore it is preferable that users are at least 18 years old when entering chatrooms)
 
 **B. Expansion version:**
 The target audience includes users who:
-- want to discuss or read comments about movies/series 
-- get more information about movies/series
+- want to discuss or read comments about a number of different listed movies/series 
+- get more information about listed movies/series
 
 #### TECH STACK 
 
@@ -183,8 +184,10 @@ The target audience includes users who:
 ##### Source Control 
 - **Git**: [Git](https://git-scm.com/) is a version control system for tracking changes across a set of files and to coordinate work between programmers working collaboratively on developing source code.
 
-###### BASIC SHARED REPOSITORY WORKFLOW
+###### PROPOSED BASIC SHARED REPOSITORY WORKFLOW
+
 A. SETUP
+
 1.    **Create app in central repository on GitHub.** Both developers will have access to push and pull- Developers must do all their work on a different branch to master and must NEVER commit to the master branch directly.
 
 2.    **Each developer clones the main GitHub repository to their local.** Developers are working in VS Code.
@@ -197,21 +200,15 @@ B. DEVELOPMENT
 
 5.  **Code in your Developername branch** and then stage changes in local `$ git add .` and commit changes with `$ git commit -m "meaningful commit description"`.
 
-6. The developer can incorporate changes from the GitHub repo into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`. They can pull using `$ git pull `. **Resolve conflicts locally in VS Code** before you push to GitHub.
+6. The developer can incorporate changes from the GitHub repo into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`. They can pull using `$ git pull origin master `. **Resolve conflicts locally in VS Code** before you push to GitHub.
 
-7. Developers can **push their changes to GitHub** from their developer branch `$ git push origin Developername`. Developers can then delete their branch when it has been merged with the Github central master branch. .  
+7. Developers can **push their changes to GitHub** from their developer branch `$ git push origin Developername`. Developers can then delete their branch when it has been merged with the Github central master branch.   
 
 ### R2: DATAFLOW DIAGRAM
 ![Dataflow Diagram](docs/DataflowDiagramT3A2-A.png)
 
-Provides dataflow diagram(s) that strictly follow the standard convensions to clearly identify the processes within your application. Clearly depicts where data is coming from, where it is going and how it is being stored. 
-https://edstem.org/courses/4966/lessons/12821/slides/91792 
-
 ### R3: APPLICATION ARCHITECTURE DIAGRAM
 ![Application Architecture Diagram](docs/ApplicationArchitectureDiagramT3A2-A.png)
-
-Shows almost flawless understanding of the high level structure of the app
-https://edstem.org/courses/4966/lessons/12821/slides/91793 
 
 ### R4: USER STORIES
 
@@ -237,7 +234,9 @@ As a User/Admin, I want my posts to be there when I return to the chatroom so I 
 Provides multiple user stories that use ‘persona, what and why’ that outline meaningful features of project. Shows evidence of user story revision and refinement. 
 
 ### R5: WIREFRAMES
-Wireframes were prepared using Balsamiq Wireframes.
+Wireframes were prepared using Balsamiq Wireframes. 
+
+Desktop and mobile versions are provided below, whilst tablet version is only provided where the design differs.
 
 **A. Early Beginnings version**
 ![Core app wireframes: Early Beginnings version](docs/draft_wireframes.png)
@@ -248,19 +247,15 @@ Wireframes were prepared using Balsamiq Wireframes.
 ![Expanded app wireframes: Expansion version](docs/expanded_app_wireframes.png)
 
 ### R6: TRELLO
-Simple and clear standards for planning methodology chosen and adhered to.
+Planning commenced with a discussion and presentation of various concept ideas. One concept idea was selected and developed into a project idea.
 
-Project management - in a nutshell - has no single perfect technique or process or procedure. The best procedure you can follow is one that you'll stick to.
-You'll commonly hear about project management methodologies like "waterfall" and "agile", and you can find overviews of those here:
-•	Waterfall methodology: https://www.projectmanager.com/waterfall-methodology 
-•	Agile methodology: https://www.atlassian.com/agile 
-•	Quick comparison of the two: https://project-management.com/agile-vs-waterfall/ 
-
-The aim of this project is to build the core app (early beginnings) first and then incorporate features from the expansion version. The aim is not to deliver the full expansion version, but rather to deliver extra features on the core app. 
+The aim of this project is to build the core app (early beginnings) first and then incorporate features from the expansion version. The aim is not to deliver the full expansion version, but rather to deliver extra features on the core app.   
 
 An Agile methodology will be used in this project. This methodology allows for changing the requirements at any time to adapt to challenges encountered and to incorporate additional features as time permits. The team will manage the project jointly rather than appointing a single project manager. Testing will be performed concurrently with development. 
 
-The Trello board used for planning this project is available online at: https://trello.com/b/VLtFLtdT/aftercredits
+Trello is a Kanban-style web application used for organizing collaborative projects. Columns represent stages of the process (to do, working on, blocked, finished). Cards represent tasks. These task cards are moved between the column stages as work on the task progresses. The board as a whole provides a visual depiction of the project progress. 
+
+The Trello board used for this project is available online at: https://trello.com/b/VLtFLtdT/aftercredits
 
 ###### Trello Board and Cards Overview
 Cards are arranged by 4 main categories:
@@ -269,10 +264,23 @@ Cards are arranged by 4 main categories:
 - To Do - Front End (yellow)
 - Other Criteria Part B (orange)
 
+Cards contain information about the relevant task or criteria, a color cover corresponding to the column category (for ease of progress tracking), difficulty level, deadlines and task allocation.
+
 ![Trello Board and Cards](docs/trello1.PNG)
 
 ###### PART A: Task Allocation
+The Trello Board, columns and preliminary cards for the overall project are created. All tasks for Part A are allocated. 
+
 ![Part A Task Allocation](docs/trello2.PNG)
-###### PART A: Task
-![](docs/trello3.PNG)
-![](docs/trello4.PNG)
+###### PART A: Task Progression
+Developers work on multiple tasks concurrently. 
+![PART A progression](docs/trello3.PNG)
+![PART A progression](docs/trello5.PNG)
+![PART A progression](docs/trello6.PNG)
+![PART A progression](docs/trello7.PNG)
+
+###### PART A: Completed Tasks
+![PART A completed dataflow diagram](docs/trello4.PNG)
+![PART A completed application architecture diagram](docs/trello8.PNG)
+![PART A completed description of website](docs/trello9.PNG)
+![PART A completed wireframes](docs/trello10.PNG)
