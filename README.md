@@ -189,18 +189,12 @@ A. SETUP
 1.    **Create app in central repository on GitHub.** Both developers will have access to push and pull- Developers must do all their work on a different branch to master and must NEVER commit to the master branch directly.
 2.    **Each developer clones the main GitHub repository to their local.** Developers are working in VS Code.
 3.    In local, developers create and checkout their own branch:  `$git checkout -b Developername`. 
-4. They can then switch between branches using `$ git checkout master` or `$ git checkout Developername`. But they should only code on their Developername branch.
 
 B. DEVELOPMENT
-
-5. Developers should do all their work on their own branch and NEVER commit to the central repositry (GitHub) master branch directly. Developers should work only on their `Developername` branch. `$ git branch` to see what branch you are on. If you are not on your branch `$ git checkout Developername`
-7.  **Code in your Developername branch** and then stage changes in local `$ git add .` and commit changes with `$ git commit -m "meaningful commit description"`.
-8. When the central repository (GitHub) has changed, developers can **pull the GitHub changes into their local** master branch and can do this with `$git pull origin master`. The developer can incorporate changes from the GitHub repo into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`.
-9.    **Resolve conflicts locally in VS Code** before you push to GitHub.
-10.    When you are ready to **push your changes to GitHub** from your developer branch `$ git push origin Developername`.
-11. Your branch will now be visible in GitHub and you can click on it. You can then follow the prompts by clicking on "Pull Request" and "Send Pull Request". Once merged, you may delete the `Developername` banch in Github.
-
-
+4. Developers should do all their work on their own branch and NEVER commit to the central repositry (GitHub) master branch directly. Developers should work only on their `Developername` branch. `$ git branch` to see what branch you are on. If you are not on your branch `$ git checkout Developername`
+5.  **Code in your Developername branch** and then stage changes in local `$ git add .` and commit changes with `$ git commit -m "meaningful commit description"`.
+6. The developer can incorporate changes from the GitHub repo into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`. They can pull using `$ git pull `. **Resolve conflicts locally in VS Code** before you push to GitHub.
+7. Developers can then push their changes to GitHub and delete their branch when it has been merged with the Github central master branch.
 
 ### R2: DATAFLOW DIAGRAM
 ![Dataflow Diagram](docs/DataflowDiagramT3A2-A.png)
