@@ -200,10 +200,13 @@ B. DEVELOPMENT
 
 ### R2: DATAFLOW DIAGRAM
 ![Dataflow Diagram](docs/DataflowDiagramT3A2-A.png)
+
 Provides dataflow diagram(s) that strictly follow the standard convensions to clearly identify the processes within your application. Clearly depicts where data is coming from, where it is going and how it is being stored. 
 https://edstem.org/courses/4966/lessons/12821/slides/91792 
 
 ### R3: APPLICATION ARCHITECTURE DIAGRAM
+![Application Architecture Diagram](docs/ApplicationArchitectureDiagramT3A2-A.png)
+
 Shows almost flawless understanding of the high level structure of the app
 https://edstem.org/courses/4966/lessons/12821/slides/91793 
 
