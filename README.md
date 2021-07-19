@@ -236,8 +236,6 @@ Provides multiple user stories that use ‘persona, what and why’ that outline
 ### R5: WIREFRAMES
 Wireframes were prepared using Balsamiq Wireframes. 
 
-Desktop and mobile versions are provided below, whilst tablet version is only provided where the design differs.
-
 **A. Early Beginnings version**
 ![Core app wireframes: Early Beginnings version](docs/draft_wireframes.png)
 <br>
