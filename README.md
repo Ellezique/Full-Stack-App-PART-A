@@ -202,7 +202,7 @@ B. DEVELOPMENT
 
 6. The developer can incorporate changes from the GitHub repo into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`. They can pull using `$ git pull origin master `. **Resolve conflicts locally in VS Code** before you push to GitHub.
 
-7. Developers can **push their changes to GitHub** from their developer branch `$ git push origin Developername`. Developers can then delete their branch when it has been merged with the Github central master branch.   
+7. Developers can **push their changes to GitHub** from their developer branch `$ git push origin Developername`. Developers can then follow the prompts in the GitHub repository "Pull requests tab" to merge their Developername branch with the Github master branch (green butons) and delete their branch when after it has been merged with the Github central master branch (purple button).   
 
 ### R2: DATAFLOW DIAGRAM
 ![Dataflow Diagram](docs/DataflowDiagramT3A2-A.png)
@@ -293,5 +293,6 @@ Please visit the Trello board to see expanded details for card activity as recor
 ![PART A completed application architecture diagram](docs/trello8.PNG)
 ![PART A completed description of website](docs/trello9.PNG)
 ![PART A completed wireframes](docs/trello10.PNG)
-Add more Part B card details and checklist items:
+
+Added more Part B card details and checklist items:
 ![PART A completed wireframes](docs/trello12.PNG)
