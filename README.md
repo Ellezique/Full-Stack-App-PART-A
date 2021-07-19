@@ -247,7 +247,7 @@ Desktop and mobile versions are provided below, whilst tablet version is only pr
 ![Expanded app wireframes: Expansion version](docs/expanded_app_wireframes.png)
 
 ### R6: TRELLO
-Local text
+
 Planning commenced with a discussion and presentation of various concept ideas. One concept idea was selected and developed into a project idea.
 
 The aim of this project is to build the core app (early beginnings) first and then incorporate features from the expansion version. The aim is not to deliver the full expansion version, but rather to deliver extra features on the core app.   
