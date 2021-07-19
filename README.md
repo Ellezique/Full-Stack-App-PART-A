@@ -247,6 +247,7 @@ Desktop and mobile versions are provided below, whilst tablet version is only pr
 ![Expanded app wireframes: Expansion version](docs/expanded_app_wireframes.png)
 
 ### R6: TRELLO
+Local text
 Planning commenced with a discussion and presentation of various concept ideas. One concept idea was selected and developed into a project idea.
 
 The aim of this project is to build the core app (early beginnings) first and then incorporate features from the expansion version. The aim is not to deliver the full expansion version, but rather to deliver extra features on the core app.   
@@ -258,8 +259,9 @@ Trello is a Kanban-style web application used for organizing collaborative proje
 The Trello board used for this project is available online at: https://trello.com/b/VLtFLtdT/aftercredits
 
 ###### Trello Board and Cards Overview
+
 Cards are arranged by 4 main categories:
-- Part A (pink)
+- To Do - Part A (pink)
 - To Do - Back End (cyan)
 - To Do - Front End (yellow)
 - Other Criteria Part B (orange)
@@ -269,18 +271,27 @@ Cards contain information about the relevant task or criteria, a color cover cor
 ![Trello Board and Cards](docs/trello1.PNG)
 
 ###### PART A: Task Allocation
+
 The Trello Board, columns and preliminary cards for the overall project are created. All tasks for Part A are allocated. 
 
 ![Part A Task Allocation](docs/trello2.PNG)
+
 ###### PART A: Task Progression
+
 Developers work on multiple tasks concurrently. 
 ![PART A progression](docs/trello3.PNG)
 ![PART A progression](docs/trello5.PNG)
 ![PART A progression](docs/trello6.PNG)
 ![PART A progression](docs/trello7.PNG)
+Developers agreed to take a break from the project over the weekend. Card deadline updated from aspirational early-finish deadline to actual deadline:
+![PART A progression](docs/trello11.PNG)
 
 ###### PART A: Completed Tasks
+
+Please visit the Trello board to see expanded details for card activity as recorded over time: https://trello.com/b/VLtFLtdT/aftercredits
 ![PART A completed dataflow diagram](docs/trello4.PNG)
 ![PART A completed application architecture diagram](docs/trello8.PNG)
 ![PART A completed description of website](docs/trello9.PNG)
 ![PART A completed wireframes](docs/trello10.PNG)
+Add more Part B card details and checklist items:
+![PART A completed wireframes](docs/trello12.PNG)
