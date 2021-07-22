@@ -1,6 +1,7 @@
 # T3A2-A  Full Stack App (PART A)
 ## AfterCredits
 #### By: Chris Gibson & Gizelle van Zyl
+GitHub repository: https://github.com/Ellezique/Full-Stack-App-PART-A
 ___
 
 ### R1: DESCRIPTION OF WEBSITE
