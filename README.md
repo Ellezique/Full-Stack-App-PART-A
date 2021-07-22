@@ -306,7 +306,8 @@ Added more Part B card details and checklist items:
 Part A progress continues;
 ![PART A progression](docs/trello13.PNG)
 ![PART A progression](docs/trello14.PNG)
-
+![PART A progression](docs/trello17.PNG)
+![PART A progression](docs/trello18.PNG)
 ###### PART A: Completed Tasks
 
 Please visit the Trello board to see expanded details for card activity as recorded over time: https://trello.com/b/VLtFLtdT/aftercredits
@@ -315,3 +316,5 @@ Please visit the Trello board to see expanded details for card activity as recor
 ![PART A completed description of website](docs/trello9.PNG)
 ![PART A completed wireframes](docs/trello10.PNG)
 ![PART A completed user stories](docs/trello15.PNG)
+![PART A completed presentation](docs/trello16.PNG)
+![PART A completed trello part A](docs/trello19.PNG)
