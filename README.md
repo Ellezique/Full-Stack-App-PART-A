@@ -210,17 +210,32 @@ https://edstem.org/courses/4966/lessons/12821/slides/91792
 Shows almost flawless understanding of the high level structure of the app
 https://edstem.org/courses/4966/lessons/12821/slides/91793 
 
-### R4: USER STORIES
+### R4: USER PERSONAS/STORIES
 
-As a <user>,
+### PERSONAS
+|         | Who are they? | What is their main goal? | What is their main barrier to achieving this goal? |
+|---------|---------------|--------------------------|----------------------------------------------------|
+| Persona |               |                          |                                                    |
+
+
+
+### STORIES
+Format:
+```
+As a <persona>,
 I want to <action>,
 so/because <reason>
+```
+
+As a mobile user, I want to be able to use the site on my phone and for it to be a smooth experience so I can stay in the conversation while I am on the move.
 
 As a movie/tv-series enthusiast, I want to go into chatrooms based around my favourite films/shows with others so I can share my opinions and gain insight from our discussions.
 
-As a non-registered User, I want to be able to view the site without having to log in so I can see what it is all about before I go through the process of creating an account.
+As a non-registered User, I want to be able to view the content of the site so I can see what it is all about before I go through the process of creating an account.
 
 As a User, I dont want other users to be able to edit/delete my posts unless they are an admin doing it for legitimate reasons so I know what I post is safeguarded and is my own content.
+
+As a User of the site, I want to be able to contact an Admin so that I can send them feedback about the site or to inform them about issues I have with either the site or other users.
 
 As an Admin, I want to be able to delete other user's posts so I can moderate the conversation if I deem it necessary.
 
