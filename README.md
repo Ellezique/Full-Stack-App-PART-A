@@ -1,4 +1,3 @@
-
 # T3A2-A  Full Stack App (PART A)
 ## AfterCredits
 #### By: Chris Gibson & Gizelle van Zyl
@@ -7,7 +6,7 @@ ___
 ### R1: DESCRIPTION OF WEBSITE
 
 #### PURPOSE 
-AfterCredits is a movie discussion app for people over the age of 18. There are two proposed versions of the app:
+AfterCredits is a movie discussion app (ideally for people aged 18 and older). There are two proposed versions of the app:
 
 **A. Early Beginnings version:** The initial core app version is designed to build user community. There will be one movie or series for the month, similar to a book club. Community users can see what the select movie/series is so that they can have a chance to watch it if they haven't seen it yet. When they are ready, they can join the chatroom to discuss the movie/series with other users.
 
@@ -109,7 +108,7 @@ Users may click on a card to view additional movie information, which may includ
 ###### Chatroom: Expansion version
 As above. 
 
-Additionally user messages can display with the user's chosen avatar or images. Users can click on a username to see all of their messages.
+Additionally user messages can display with the user's chosen avatar or image. Users can click on a username to see all of their messages.
 
 Each movie/series can have two chatrooms:
 - with spoilers
@@ -135,19 +134,21 @@ Styling could include the following:
 4.  Animated background: https://greensock.com/
 
 ###### Additional features for future development (the nice-to-have-but-not-included list)
-- A search feature so that users can search for a movie or series by genre, actor, rating etc. This feature will not be pursued in the current project. It would require database design changes and features that are beyond the scope of the current project.
+- A search feature so that users can search for a particular movie or series by genre, actor, rating etc. This feature will not be pursued in the current project. It would require database design changes and features that are beyond the scope of the current project.
 - Full CRUD functionality over users so that users may edit their own details (and so that Admin can delete users). 
-- Thorough solutions to moderating and handling user input. More thorough data sanitisation and sterilization.
+- Thorough solutions to moderating and handling user input and dealing with inappropriate content.
 
 ---
 
 #### TARGET AUDIENCE
 
+Broadly, the target audience inludes anyone that enjoys watching movies/series and would like to read other users' comments and engage in discussions about movies/series. The app is a community for watchers, bingers, enthusiasts, the curious and critics alike.
+
 **A. Early Beginnings version:**
 The target audience includes users who:
 - want to join a monthly movie/series club
 - want to discuss or read comments about a movie/series
-- are at least 18 years old (movies and series have classifications and age restrictions which vary between jurisdictions, therefore it is preferable that users are at least 18 years old when entering chatrooms)
+- are, ideally, at least 18 years old (movies and series have classifications and age restrictions which vary between jurisdictions, therefore it is preferable that users are at least 18 years old when entering chatrooms).
 
 **B. Expansion version:**
 The target audience includes users who:
@@ -161,7 +162,7 @@ The target audience includes users who:
 
 ##### Front-end/client side
 - **React.js**: [React](https://reactjs.org/) is a front-end (client side) **JavaScript** library used to build user interfaces and components.
-- **Yarn**: [Yarn](https://yarnpkg.com/) is a [package manager](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/) for JavaScript (client side) that will be used for this project. It is prefereable to use yarn with React apps. The most stable version currently is 1.22.5, which will be used for this project. To add and remove packages, `yarn add [package]` and `yarn remove [package]`. Install all project dependencies using `yarn install`. Dependencies can be upgraded to the currentl stable versions by running `yarn upgrade`. All dependencies and configuration for the React side of AfterCredits will be specified in the package.json file.
+- **Yarn**: [Yarn](https://yarnpkg.com/) is a [package manager](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/) for JavaScript (client side) that will be used for this project. It is prefereable to use yarn with React apps. The most stable version currently is 1.22.5, which will be used for this project. To add and remove packages, `yarn add [package]` and `yarn remove [package]`. Install all project dependencies using `yarn install`. Dependencies can be upgraded to the current stable versions by running `yarn upgrade`. All dependencies and configuration for the React side of AfterCredits will be specified in the package.json file.
 - **Jest**: [Jest](https://jestjs.io/) is a testing framework that works with React projects (testing front-end).
 - **Netlify**: [Netlify](https://www.netlify.com/) will be used to deploy the front-end React repository. The service used for this project is free of charge.
 
@@ -188,7 +189,7 @@ The target audience includes users who:
 
 A. SETUP
 
-1.    **Create app in central repository on GitHub.** Both developers will have access to push and pull- Developers must do all their work on a different branch to master and must NEVER commit to the master branch directly.
+1.    **Create app in central repository on GitHub.** Both developers will have access to push and pull- Developers must do all their work on a different branch to master and must not commit to the master branch directly.
 
 2.    **Each developer clones the main GitHub repository to their local.** Developers are working in VS Code.
 
@@ -196,13 +197,13 @@ A. SETUP
 
 B. DEVELOPMENT
 
-4. Developers should do all their work on their own branch and NEVER commit to the central repositry (GitHub) master branch directly. Developers should work only on their `Developername` branch. `$ git branch` to see what branch you are on. If you are not on your branch `$ git checkout Developername`
+4. Developers should do all their work on their own branch and not commit to the central repositry (GitHub) master branch directly. Developers should work only on their `Developername` branch. `$ git branch` to see what branch you are on. If you are not on your branch `$ git checkout Developername`
 
 5.  **Code in your Developername branch** and then stage changes in local `$ git add .` and commit changes with `$ git commit -m "meaningful commit description"`.
 
-6. The developer can incorporate changes from the GitHub repo into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`. They can pull using `$ git pull origin master `. **Resolve conflicts locally in VS Code** before you push to GitHub.
+6. The developer can incorporate changes from the GitHub repo into the branch that they are on by making sure they are on their `Developername` banch and then:  `$ git merge master`. They can pull using `$ git pull origin master `. **Resolve conflicts locally in VS Code** before pushing to GitHub.
 
-7. Developers can **push their changes to GitHub** from their developer branch `$ git push origin Developername`. Developers can then follow the prompts in the GitHub repository "Pull requests tab" to merge their Developername branch with the Github master branch (green butons) and delete their branch when after it has been merged with the Github central master branch (purple button).   
+7. Developers can **push their changes to GitHub** from their developer branch `$ git push origin Developername`. Developers can then follow the prompts in the GitHub repository "Pull requests tab" to merge their Developername branch with the Github master branch (green buttons) and delete their branch after it has been merged with the Github central master branch (purple button).   
 
 ### R2: DATAFLOW DIAGRAM
 ![Dataflow Diagram](docs/DataflowDiagramT3A2-A.png)
@@ -262,13 +263,13 @@ Wireframes were prepared using Balsamiq Wireframes.
 
 Planning commenced with a discussion and presentation of various concept ideas. One concept idea was selected and developed into a project idea.
 
-The aim of this project is to build the core app (early beginnings) first and then incorporate features from the expansion version. The aim is not to deliver the full expansion version, but rather to deliver extra features on the core app.   
+The aim of this project is to build the core app (Early Beginnings) first and then incorporate features from the Expansion version. The aim is not to deliver the full expansion version, but rather to deliver extra features on the core app.   
 
 An Agile methodology will be used in this project. This methodology allows for changing the requirements at any time to adapt to challenges encountered and to incorporate additional features as time permits. The team will manage the project jointly rather than appointing a single project manager. Testing will be performed concurrently with development. 
 
-Trello is a Kanban-style web application used for organizing collaborative projects. Columns represent stages of the process (to do, working on, blocked, finished). Cards represent tasks. These task cards are moved between the column stages as work on the task progresses. The board as a whole provides a visual depiction of the project progress. 
+Trello is a Kanban-style web application used for organizing collaborative projects. Columns represent stages of the process (to do, working on, blocked, finished). Cards represent tasks. These task cards are moved between the column stages as work on the task progresses. The board, as a whole, provides a visual depiction of the project progress. 
 
-The Trello board used for this project is available online at: https://trello.com/b/VLtFLtdT/aftercredits
+The Trello board used for this project is online at: https://trello.com/b/VLtFLtdT/aftercredits
 
 ###### Trello Board and Cards Overview
 
@@ -295,8 +296,16 @@ Developers work on multiple tasks concurrently.
 ![PART A progression](docs/trello5.PNG)
 ![PART A progression](docs/trello6.PNG)
 ![PART A progression](docs/trello7.PNG)
+
 Developers agreed to take a break from the project over the weekend. Card deadline updated from aspirational early-finish deadline to actual deadline:
 ![PART A progression](docs/trello11.PNG)
+
+Added more Part B card details and checklist items:
+![PART A progression](docs/trello12.PNG)
+
+Part A progress continues;
+![PART A progression](docs/trello13.PNG)
+![PART A progression](docs/trello14.PNG)
 
 ###### PART A: Completed Tasks
 
@@ -305,6 +314,4 @@ Please visit the Trello board to see expanded details for card activity as recor
 ![PART A completed application architecture diagram](docs/trello8.PNG)
 ![PART A completed description of website](docs/trello9.PNG)
 ![PART A completed wireframes](docs/trello10.PNG)
-
-Added more Part B card details and checklist items:
-![PART A completed wireframes](docs/trello12.PNG)
+![PART A completed user stories](docs/trello15.PNG)
