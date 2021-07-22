@@ -215,38 +215,37 @@ https://edstem.org/courses/4966/lessons/12821/slides/91793
 ### PERSONAS
 |         | Who are they? | What is their main goal? | What is their main barrier to achieving this goal? |
 |---------|---------------|--------------------------|----------------------------------------------------|
-| Persona |               |                          |                                                    |
+| Binge Watcher | A person that uses streaming services such as netflix to binge watch shows and movies | To discuss in real time what is happening in their favourite shows while they are watching them | Finding a chat application that supports live message updates without having to refresh the page/app |
 
+|         | Who are they? | What is their main goal? | What is their main barrier to achieving this goal? |
+|---------|---------------|--------------------------|----------------------------------------------------|
+| Movie Enthusiast | A person that regularly goes to the cinema to watch the latest movies | To find a place where others that share their interest can gather to discuss the latest movies | Finding a website that facilitates discussion around this mutual interest |
 
+|         | Who are they? | What is their main goal? | What is their main barrier to achieving this goal? |
+|---------|---------------|--------------------------|----------------------------------------------------|
+| AfterCredits Administrator | Users with admin privileges on the AfterCredits web app | General admin duties around card creation and chatroom monitoring | The functionality present in the app and the authentication mechanism present to limit who can access that functionality |
 
 ### STORIES
-Format:
-```
-As a <persona>,
-I want to <action>,
-so/because <reason>
-```
+As a Binge Watcher of TV shows and movies, I want to feel like the discussion I have in the chatroom is happening in real time so we can react/discuss things that are happening as it unfolds.
 
-As a mobile user, I want to be able to use the site on my phone and for it to be a smooth experience so I can stay in the conversation while I am on the move.
+As a Binge Watcher, I want to be able to use the site on my phone and for it to be a smooth experience so I can stay in the conversation while I am on the move.
 
-As a movie/tv-series enthusiast, I want to go into chatrooms based around my favourite films/shows with others so I can share my opinions and gain insight from our discussions.
+As a Binge Watcher, I dont want other users to be able to change my posts, so I know what I post is safeguarded and is my own content.
 
-As a non-registered User, I want to be able to view the content of the site so I can see what it is all about before I go through the process of creating an account.
+As a Binge Watcher, I want to be able to contact an Admin so that I can send them feedback about the site or to inform them about issues I have with either the site or other users.
 
-As a User, I dont want other users to be able to edit/delete my posts unless they are an admin doing it for legitimate reasons so I know what I post is safeguarded and is my own content.
+As a Movie Enthusiast, I want to go into chatrooms based around my favourite films/shows with others, so I can share my opinions and gain insight from our discussions.
 
-As a User of the site, I want to be able to contact an Admin so that I can send them feedback about the site or to inform them about issues I have with either the site or other users.
+As a Movie Enthusiast, I want to be able to view the initial content of the site without registering so I can see what it is all about before I go through a potentially annoying and lengthy process of creating an account and giving away my personal details.
 
-As an Admin, I want to be able to delete other user's posts so I can moderate the conversation if I deem it necessary.
+As a Movie Enthusiast, I want my posts to be there when I return to the chatroom so I can continue the conversation later.
 
-As an Admin, I want to be able to make/edit/delete movie/series cards for Users to view and enter it's own chatroom so I can enable users to get the conversations on that particular movie/series started.
+As a AfterCredits Administrator, I want to have the ability to remove certain user messages from the chatroom if they are deemed to break the terms of service for the web app, so I can ensure the chatroom stays civil even during heated discussions.
 
-As a User/Admin, I want to be able to make/edit/delete my own posts so I can share my opinions about a movie/series with others.
+As a AfterCredits Administrator, I want to be able to manage movie/series cards for Users to view and interact with, so I can enable users to have their conversations on that particular movie/series.
 
-As a User/Admin, I want my posts to be there when I return to the chatroom so I can continue the conversation later.
+As a AfterCredits Administrator, I want to be able to join the conversation alongside other users, so I can share my views on my favourite hobby with them.
 
-
-Provides multiple user stories that use ‘persona, what and why’ that outline meaningful features of project. Shows evidence of user story revision and refinement. 
 
 ### R5: WIREFRAMES
 Wireframes were prepared using Balsamiq Wireframes.
