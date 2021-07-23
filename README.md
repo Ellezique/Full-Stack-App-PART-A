@@ -253,7 +253,7 @@ As a AfterCredits Administrator, I want to be able to join the conversation alon
 Wireframes were prepared using Balsamiq Wireframes. 
 
 **A. Early Beginnings version**
-![Core app wireframes: Early Beginnings version](docs/draft_wireframes.png)
+![Core app wireframes: Early Beginnings version](docs/core_app_wireframes.png)
 <br>
 
 **B. Expansion version**
