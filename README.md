@@ -2,7 +2,20 @@
 ## AfterCredits
 #### By: Chris Gibson & Gizelle van Zyl
 GitHub repository: https://github.com/Ellezique/Full-Stack-App-PART-A
-___
+
+-----------------------------------------------------------
+#### GitHub repositories:
+- Front end: https://github.com/Ellezique/aftercredits-client
+- Back end: https://github.com/Ellezique/aftercredits-server
+- This Readme: https://github.com/Ellezique/Full-Stack-App-PART-A  
+
+#### Deployed Sites:
+- Netlify front end deployment: https://aftercredits.netlify.app
+- Heroku back end deployment: https://aftercredits-api.herokuapp.com/
+
+Heroku and Netlify are connected to their respective Github repositories and are set up for automatic deployment from the master branch.
+
+----------------------------------------------------------------
 
 ### R1: DESCRIPTION OF WEBSITE
 
