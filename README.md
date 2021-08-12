@@ -36,10 +36,15 @@ Users can see the listed movie/series cards with the film title and poster. A us
 
 AfterCredits is a site for users to get information about listed movies/series and join a chatroom discussion.
 
+DISCLAIMER:
+The app was planned with an early beginnings version (with basic features) and an expansion version with numerous features (to strive towards but unlikely to fully implement by the deadline). The delivered application, as anticipated, includes numerous features from the expansion version but does not implement all features from the expansion version.
+Details of the planned early beginnings and expansion apps are included along with details of the delivered application.
+
 ---
-#### FUNCTIONALITY/ FEATURES
+#### PLANNING FUNCTIONALITY/ FEATURES
 
 **A. Early Beginnings version:**
+(see below for the functionality/featuers and screenshots in the delivered app)
 
 ###### Log in/Sign up: Early Beginnings version
 Users can sign up and then log in to access the chatroom to discuss the movie/series of the month. They will need the following to sign up:
@@ -95,7 +100,7 @@ Each JavaScript component will have its own css stylesheet e.g. Navbar.js and Na
 ---
 
 #### PLANNING FUNCTIONALITY/ FEATURES
-(see below for the functionality/featuers in the delivered app)
+(see below for the functionality/featuers and screenshots in the delivered app)
 
 **B. Expansion version:**
 
@@ -145,7 +150,6 @@ Styling could include the following:
 
 ###### Additional features for future development (the nice-to-have-but-not-included list)
 - A search feature so that users can search for a particular movie or series by genre, actor, rating etc. This feature will not be pursued in the current project. It would require database design changes and features that are beyond the scope of the current project.
-- Full CRUD functionality over users so that users may edit their own details (and so that Admin can delete users). 
 - Thorough solutions to moderating and handling user input and dealing with inappropriate content.
 
 #### DELIVERED FUNCTIONALITY/ FEATURES
@@ -157,6 +161,8 @@ Styling could include the following:
 
 ###### Database 
 ![Database](docs/final_erd.PNG)
+
+The backend Rails API app handles the users, messages and cards. The data is stored in a postgreSQL database.
 
 ###### Log in/Sign up: Delivered
 Users can sign up if they do not have an account. The log in page has a link to the sign up page and vice versa. 
@@ -197,12 +203,16 @@ A "Show more" button toggles additional movie data. A "Chatroom" button toggles 
 
 
 ###### Chatroom: Delivered
-Each movie/series card has its own chatroom. The chatroom shows all messages for that card. When there a lot of messages, users will have a scroll bar to use should they wish to scroll down to old messages. 
+Each movie/series card has its own chatroom. The chatroom shows all messages for that card. When there a lot of messages, users will have a scroll bar to use should they wish to scroll down to old messages. Logged in users can post messages.
 
 An option button reveals edit and delete buttons. Individual messages can be edited or deleted. A pop up warns users before deleting a message.
 
 ![Options](docs/options.PNG)
 ![Pop up](docs/popup.PNG)
+
+This is a fullstack application using React app on the front end and a Rails API app in the backend. The backend Rails API handles messages, users and cards and data is stored in a postgreSQL database. 
+
+At the time of deadline, the AfterCredits app calls all messages from the server before processing them on the frontend. Future improvements to the app should handle this in the backend. 
 
 ###### Contact Page: Delivered
 
@@ -260,34 +270,50 @@ The target audience includes users who:
 - get more information about listed movies/series
 
 **C. Delivered Application:** 
-#######################################################################
-#######################################################################
-#######################################################################
-#######################################################################
+As above. The onus is on users themselves to certify and confirm that they are at least 18 years old when signing up. 
 
-#### TECH STACK 
+#### TECH STACK, third party APIs and Packages 
 
 - **HTML**: HyperText Markup Language is the standard markup language for documents to display in web browsers. 
-- **CSS**: Cascading Style Sheets describe the presentation and styling of markup language documents.
+- **CSS**: Cascading Style Sheets describe the presentation and styling of markup language documents. There are numerous style sheets for general style, components and pages. Not all pages and componenets required their own stylesheets.
 
 ##### Front-end/client side
 - **React.js**: [React](https://reactjs.org/) is a front-end (client side) **JavaScript** library used to build user interfaces and components.
 - **Yarn**: [Yarn](https://yarnpkg.com/) is a [package manager](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/) for JavaScript (client side) that will be used for this project. It is prefereable to use yarn with React apps. The most stable version currently is 1.22.5, which will be used for this project. To add and remove packages, `yarn add [package]` and `yarn remove [package]`. Install all project dependencies using `yarn install`. Dependencies can be upgraded to the current stable versions by running `yarn upgrade`. All dependencies and configuration for the React side of AfterCredits will be specified in the package.json file.
-- **Jest**: [Jest](https://jestjs.io/) is a testing framework that works with React projects (testing front-end).
-- **Netlify**: [Netlify](https://www.netlify.com/) will be used to deploy the front-end React repository. The service used for this project is free of charge.
+- **Jest**: [Jest](https://jestjs.io/) is a testing framework that works with React projects (testing front-end). It was used for testing along with the testing-library.
+- **Packages**
+- [Bing Maps-React](https://www.npmjs.com/package/bingmaps-react) is a package that makes it relatively simple to use the Bing Maps API, and accordingly requires a Bing Maps API key. Unfortunately, this package throws an error when testing with Jest. This error remains an open issue that has been previously reported and followed up on by one of the developers in this app: https://github.com/milespratt/bingmaps-react/issues/32
+![Bing Maps for React package issue](docs/bingerror.PNG)
+- [Font Awesome](https://fontawesome.com) provides vector icons and logos. The initial logo was a vector icon, which was later replaced by a popcord png image. Fontawesome vector icons were used for the navbar burger menu icons.
+- [Axios](https://www.npmjs.com/package/axios) is a promise based HTTP client for the browser. It was especially useful on the front end application for API calls (request and response).
+- As this is a React application, dependencies include testing-library for react and jest as well as react-dom and react-router-dom.
+- **Netlify**: [Netlify](https://www.netlify.com/) is used to deploy the front-end React repository. The service used for this project is free of charge. Netlify forms was used for the contact form on the contact page and Netlify receives and stores the contact information submitted (and also includes a helpful spam filter).
 
 ##### Back-end/client side
+The back end application is a Rails API for messages, users and movie/series cards.
 - **Ruby on Rails**: [Ruby on Rails](https://rubyonrails.org/) is a back-end/ server side application framework written in Ruby. It has a model-view-controller framework.
+- **Rspec**: [Rspec](https://rspec.info/) is a meta-gem used for testing in Ruby on Rails. Tests have been prepared for models and requests.
 - **RubyGems**: [Ruby Gems](https://rubygems.org/) is a package management framework for Ruby and is used to distribute Ruby programs and libraries. RubyGems is a tool used to install gems.
-- **Rspec**: [Rspec](https://rspec.info/) is a meta-gem used for testing in Ruby on Rails.
+The following additional gems were used to assist with testing the rails api:
+- [Factory Bot](https://github.com/thoughtbot/factory_bot_rails) contains methods to dynamically create fake seed data for the testing environment. A factories folder contains files for card, message and user. 
+- [Database Cleaner](https://rubygems.org/gems/database_cleaner/versions/1.5.3) is a gem that was used for cleaning databases in the testing environment. This gem was needed to get rid of the factory bot data.
+- [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers) provides RSpec-compatible one-liners to test common Rails functionality that, if written by hand, would be much longer, more complex, and error-prone. Shoulda Matchers was used to test some model associations and validations.
+- [Knock](https://rubygems.org/gems/knock) is a gem that provides for JWT authentication for the Rails API app.
+
 - **Heroku**: [Heroku](https://www.heroku.com/) is a cloud platform that supports Ruby on Rails. It will be used to deploy the Ruby on Rails repository (back-end/ server-side). The service used for this project is free of charge.
 
+
+**The third party API's used are**:
+- [Bing Maps](https://www.bingmapsportal.com) for the interactive map on the contact page.
+- [Movie Database IMDB Alternative](https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative/) to retrieve movie/series data using only the imdb id.
+
 ##### User Testing (Development and Production)
-- Manual testing. Videos are available on youtube at: https://www.youtube.com/channel/UClVdwtuINqN1dOWUrmhG8rA
-- In future, Cypress could be considered as an alternative.
+Manual testing was recorded in video format and uploaded to Youtube. The manual video tests include tests for development and production testing. They can be accessed at the following channel: https://www.youtube.com/channel/UClVdwtuINqN1dOWUrmhG8rA
+
+- In future, Cypress could be considered as an alternative for user testing.
 
 ##### Database
-- **PostgreSQL**: [PostgreSQL](https://www.postgresql.org/) is a free relational database management system.
+- **PostgreSQL**: [PostgreSQL](https://www.postgresql.org/) is a free relational database management system. It stores the data for users, messages and move/series cards.
 
 ##### Repositories
 - **Github**: [Github](https://github.com/) is a development platform and service hosting Git version control. The service used for this project is free of charge.
@@ -361,21 +387,29 @@ As a AfterCredits Administrator, I want to be able to join the conversation alon
 ### R5: WIREFRAMES
 Wireframes were prepared using Balsamiq Wireframes. 
 
-**A. Early Beginnings version**
+**A. Planning: Early Beginnings version**
 ![Core app wireframes: Early Beginnings version](docs/core_app_wireframes.png)
 <br>
 
-**B. Expansion version**
+**B. Planning: Expansion version**
 
 ![Expanded app wireframes: Expansion version](docs/expanded_app_wireframes.png)
 
+**C. Amended Wireframes for the Delivered Application:**
+
 ### R6: TRELLO
 
-Planning commenced with a discussion and presentation of various concept ideas. One concept idea was selected and developed into a project idea.
+Planning commenced with a discussion and presentation of various concept ideas. One concept idea was selected and developed into a project idea. Gizelle planned the initial idea, app, apis and some dependencies and prepared the intial trello cards. Chris assisted with fleshing out the idea and adding additional trello cards.
 
-The aim of this project is to build the core app (Early Beginnings) first and then incorporate features from the Expansion version. The aim is not to deliver the full expansion version, but rather to deliver extra features on the core app.   
+The aim of this project was to build the core app (Early Beginnings) first and then incorporate features from the Expansion version. The aim was not to deliver the full expansion version, but rather to build as many features as possible, towards the full expansion app, within the allowed development timeline.   
 
-An Agile methodology will be used in this project. This methodology allows for changing the requirements at any time to adapt to challenges encountered and to incorporate additional features as time permits. The team will manage the project jointly rather than appointing a single project manager. Testing will be performed concurrently with development. 
+An Agile methodology was used in this project. This methodology allows for changing the requirements at any time to adapt to challenges encountered and to incorporate additional features as time permits. The team managed the project jointly rather than appointing a single project manager. Informal testing was performed concurrently with development e.g postman was used to test all crud functionality for cards, users and messages during development (some but not all screenshots of this testing were recorded in trello cards). User testing videos were recorded and uploaded during development. Both the front and backend apps were deployed early and often. Most formal framework testing for both the rails and react apps were done in the late stages of development. Test Driven Development was not used during this project, allowing developers to built as many features as possible before the deadline. Admittedly, TDD would be best practice to ensure that further development does not break working code. Testing cards were not assigned to specific developers early on because it was proposed that developers write tests for the components that they build. Due to time constraints and various components depending on completion of other components and code, the latter was prioritised over early test writing.
+
+Gizelle created and deployed both front and back end apps. She wrote most of the backend code, did the styling for the front end and built the navbar, contacts page (including contact form and Bing Map), Sign up and Log in forms. Gizelle also prepared most of the documentation. Gizelle wrote the Rails tests and recorded the user test videos but wrote limited tests for the React app.
+
+Chris is the more experienced React developer and wrote the code for the core components of the front end app - the cards and chatroom components that handle the third party movie API (to retrieve movie data for each imdb id stored in the database) and Rails API (messages, users and cards). Chris also coded the components required to create a card, retrieve messages, post/edit/destroy messages and pop up warning. He also prepared the dataflow diagram, user stories and application architecture diagram for the documentation.
+
+Some tasks were assigned and allocated at outset. Later tasks were picked up by developers in accordance with their preference, skills and capacity.
 
 Trello is a Kanban-style web application used for organizing collaborative projects. Columns represent stages of the process (to do, working on, blocked, finished). Cards represent tasks. These task cards are moved between the column stages as work on the task progresses. The board, as a whole, provides a visual depiction of the project progress. 
 
