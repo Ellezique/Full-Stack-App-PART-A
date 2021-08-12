@@ -152,14 +152,16 @@ Styling could include the following:
 - A search feature so that users can search for a particular movie or series by genre, actor, rating etc. This feature will not be pursued in the current project. It would require database design changes and features that are beyond the scope of the current project.
 - Thorough solutions to moderating and handling user input and dealing with inappropriate content.
 
+------------------------------
+
 #### DELIVERED FUNCTIONALITY/ FEATURES
 **C. Delivered Application:** 
 
-###### Sitemap: Early Beginnings version
+###### Sitemap: Delivered
 
 ![Delivered App Sitemap](docs/deliveredsitemap.PNG)
 
-###### Database 
+###### Database: Delivered
 ![Database](docs/final_erd.PNG)
 
 The backend Rails API app handles the users, messages and cards. The data is stored in a postgreSQL database.
@@ -395,8 +397,8 @@ Wireframes were prepared using Balsamiq Wireframes.
 
 ![Expanded app wireframes: Expansion version](docs/expanded_app_wireframes.png)
 
-**C. Amended Wireframes for the Delivered Application:**
-
+**C. FINAL WIREFRAMES for the Delivered Application:**
+![Final Wireframes](docs/final_wireframes.png)
 ### R6: TRELLO
 
 Planning commenced with a discussion and presentation of various concept ideas. One concept idea was selected and developed into a project idea. Gizelle planned the initial idea, app, apis and some dependencies and prepared the intial trello cards. Chris assisted with fleshing out the idea and adding additional trello cards.
