@@ -22,22 +22,24 @@ Heroku and Netlify are connected to their respective Github repositories and are
 #### PURPOSE 
 AfterCredits is a movie discussion app (ideally for people aged 18 and older). There are two proposed versions of the app:
 
-**A. Early Beginnings version:** The initial core app version is designed to build user community. There will be one movie or series for the month, similar to a book club. Community users can see what the select movie/series is so that they can have a chance to watch it if they haven't seen it yet. When they are ready, they can join the chatroom to discuss the movie/series with other users.
+**A. Early Beginnings version:** The initial core app version is designed to build user community. There will be one movie or series for the month, similar to a book club. Community users can see what the selected movie/series is so that they can have a chance to watch it if they haven't seen it yet. When they are ready, they can join the chatroom to discuss the movie/series with other users.
 
 **B. Expansion version:** The expanded app will have multiple movies/series, each with their own chatroom. Users can join a chatroom to discuss any listed movie or series of their liking whenever they wish, rather than waiting for a single monthly selection. 
 
-The development plan is to build the Early Beginnings version first (core app) and to then commence incorporating features from the Expansion version. It is fairly unlikely that the entire Expansion version will be completed within the relevant development timeframe. It is anticipated that the final product will be an Early Beginnings version incorporating some additional features that have been proposed for the Expansion version. 
-
 From a real life marketing perspective, the plan would be to achieve continued member and participation growth by commencing with a small and intimate community and gradually expanding the collection of movie/series chatrooms as the community grows (and becomes, perhaps, less intimate due to the increased number of users), thereby allowing for the users to be spread out across multiple chatrooms. 
+
+**C. Delivered Application:** 
+
+The delivered application has built in functionality to create additional cards and can accommodate both the core and expansion purposes. 
+
+Users can see the listed movie/series cards with the film title and poster. A user can select a card and then see more information about the movie/series (release date, genre, cast and description) or enter the chatroom to see what other users have posted and join the discussion by posting their own comments.
+
+AfterCredits is a site for users to get information about listed movies/series and join a chatroom discussion.
 
 ---
 #### FUNCTIONALITY/ FEATURES
 
 **A. Early Beginnings version:**
-
-###### Sitemap: Early Beginnings version
-
-![Core App Sitemap](docs/core_app.PNG)
 
 ###### Log in/Sign up: Early Beginnings version
 Users can sign up and then log in to access the chatroom to discuss the movie/series of the month. They will need the following to sign up:
@@ -90,18 +92,12 @@ Styling will include the following:
 
 Each JavaScript component will have its own css stylesheet e.g. Navbar.js and Navbar.css
 
-###### Database 
-![Database](docs/erd.PNG)
-
 ---
 
-#### FUNCTIONALITY/ FEATURES
+#### PLANNING FUNCTIONALITY/ FEATURES
+(see below for the functionality/featuers in the delivered app)
 
 **B. Expansion version:**
-
-###### Sitemap: Expansion version
-
-![Expanded App Sitemap](docs/expanded_app.PNG)
 
 ###### Log in/Sign up: Expansion version
 As above. An expansion feature could enable users to select an avatar image (a limited number of images posing no storage issues) or upload their own image (requiring a storage solution such as Cloudinary).
@@ -152,7 +148,101 @@ Styling could include the following:
 - Full CRUD functionality over users so that users may edit their own details (and so that Admin can delete users). 
 - Thorough solutions to moderating and handling user input and dealing with inappropriate content.
 
----
+#### DELIVERED FUNCTIONALITY/ FEATURES
+**C. Delivered Application:** 
+
+###### Sitemap: Early Beginnings version
+
+![Delivered App Sitemap](docs/deliveredsitemap.PNG)
+
+###### Database 
+![Database](docs/final_erd.PNG)
+
+###### Log in/Sign up: Delivered
+Users can sign up if they do not have an account. The log in page has a link to the sign up page and vice versa. 
+
+![Sign up](docs/signup.PNG)
+
+If users have previously created an account, they can log in.
+
+![Log in](docs/login.PNG)
+
+###### Authentication and Authorisation: Delivered
+
+Authentication and Authorisation is handled using:
+- Knock
+- JWT
+
+There are two user roles:
+- Admin
+- User
+
+The rails api application has default users and details created in the seeds file.
+
+###### Movie/Series Cards: Delivered
+The home page includes multiple movie/series cards and more can be added using only the relevant imdb id. All other details are then called from Movie Database (IMDB Alternative) hosted on Rapid API. The postgreSQL database only stores the imdb_id thereby eliminating any copyright concerns that could arise from copying data from IMDB.
+
+![Home page](docs/home_page.PNG)
+![Add Card](docs/addcard.PNG)
+
+A user can select the movie/series card that interests them:
+
+![Selected Card](docs/selectedcard.PNG)
+
+A "Show more" button toggles additional movie data. A "Chatroom" button toggles the chatroom. Both can be open at the same time.
+
+![Show more](docs/showmore.PNG)
+![Chatroom](docs/showmore.PNG)
+![Toggle both](docs/toggleboth.PNG)
+
+
+###### Chatroom: Delivered
+Each movie/series card has its own chatroom. The chatroom shows all messages for that card. When there a lot of messages, users will have a scroll bar to use should they wish to scroll down to old messages. 
+
+An option button reveals edit and delete buttons. Individual messages can be edited or deleted. A pop up warns users before deleting a message.
+
+![Options](docs/options.PNG)
+![Pop up](docs/popup.PNG)
+
+###### Contact Page: Delivered
+
+Users can contact administrators by completing the contact form. The contact form and submissions are handled by Netlify. Submissions have been tested and receipt confirmed.
+![Contact form](docs/contact_form.PNG)
+![Form submissions received](docs/form_submissions.PNG)
+
+Users can see the fake business address on a bing map. The map is interactive with zoom in and out buttons. There is also a locate me button, an arrow that shows or hides "Australia QLD Brisbane Brisbane City" and the option to view the map in road, aerial or bird's eye view and the option to toggle labels on or off. The bottom corner of the map has the scale. If the user hovers over the pushpin, the info box will open (which can be closed by clickin on the close circle in the top right of the infobox or by moving the mouse away).
+![Bing Map](docs/map.PNG)
+![Aeriel view](docs/aerial.PNG)
+![Bird's eye view](docs/birds.PNG)
+![Label's toggled off](docs/labeloff.PNG)
+
+The contact page also contains credits. The project is built by Gizelle and Chris and their GitHub profile links open in new tabs when clicked. Free use of the background videos is permitted with credit, and accordingly, hyperlinks are included for the sources. 
+
+![Credits](docs/credits.PNG)
+
+###### NavBar: Delivered
+
+The Navigation bar has links for log in, sign up, home and contact. When a user is logged in, the navbar shows their username and the option to log out (instead of log in/sign up).
+
+The navigation bar is responsive and has a drop down menu. The navbar is slightly transparent. The links light up red on hover. The AfterCredits text lights up on hover.
+
+![Navbar](docs/navbarpic.PNG)
+![Navbar logged in](docs/navbarlog.PNG)
+![Burger Menu closed](docs/navburger.PNG)
+![Burger Menu open](docs/navmenu.PNG)
+
+Styling, design and aesthetics:
+- The navbar icons are from fontawesome: https://fontawesome.com
+- Google fonts were used to add to the limelight "hollywood" theme: https://fonts.google.com/
+- Background videos are free to use and credited on the contact page. The videos are stored in cloudinary.
+- Hover effects are used on buttons, links and cards.
+
+###### Page Not Found: Delivered
+There is a special page for error 404 with a link to the home page (to improve user experience).
+![Page not found](docs/page_not_found.PNG)
+
+-------
+
 
 #### TARGET AUDIENCE
 
@@ -168,6 +258,12 @@ The target audience includes users who:
 The target audience includes users who:
 - want to discuss or read comments about a number of different listed movies/series 
 - get more information about listed movies/series
+
+**C. Delivered Application:** 
+#######################################################################
+#######################################################################
+#######################################################################
+#######################################################################
 
 #### TECH STACK 
 
@@ -187,8 +283,8 @@ The target audience includes users who:
 - **Heroku**: [Heroku](https://www.heroku.com/) is a cloud platform that supports Ruby on Rails. It will be used to deploy the Ruby on Rails repository (back-end/ server-side). The service used for this project is free of charge.
 
 ##### User Testing (Development and Production)
-- Consider either manual testing (video recording or excel spreadsheet); or
-- Cypress
+- Manual testing. Videos are available on youtube at: https://www.youtube.com/channel/UClVdwtuINqN1dOWUrmhG8rA
+- In future, Cypress could be considered as an alternative.
 
 ##### Database
 - **PostgreSQL**: [PostgreSQL](https://www.postgresql.org/) is a free relational database management system.
