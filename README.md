@@ -18,6 +18,9 @@ Heroku and Netlify are connected to their respective Github repositories and are
 
 #### User test videos
 - All videos on this youtube channel:https://www.youtube.com/channel/UClVdwtuINqN1dOWUrmhG8rA
+
+#### Trello
+- Trello board: https://trello.com/b/VLtFLtdT/aftercredits
 ----------------------------------------------------------------
 
 ### R1: DESCRIPTION OF WEBSITE
@@ -78,7 +81,7 @@ A "Show more" button can then toggle additional data from the API e.g. a movie o
 ###### Chatroom
 Each movie/series card contains its own chatroom relevant to that movie/series.
 
-Messages will have full CRUD functionality. Users can post, edit and delete their own messages. Admin role users can additionally delete anyone's message to ensure a means for removing inappropriate content.  
+Messages will have CRUD functionality. Users can post, edit and delete their own messages. Admin role users can additionally delete anyone's message to ensure a means for removing inappropriate content.  
 
 Each message will include:
 - username
@@ -404,17 +407,21 @@ Wireframes were prepared using Balsamiq Wireframes.
 ![Final Wireframes](docs/Delivered_wireframes.png)
 ### R6: TRELLO
 
-Planning commenced with a discussion and presentation of various concept ideas. One concept idea was selected and developed into a project idea. Gizelle planned the initial idea, app, apis and some dependencies and prepared the intial trello cards. Chris assisted with fleshing out the idea and adding additional trello cards.
+Planning commenced with a discussion and presentation of various concept ideas. One concept idea was selected and developed into a project idea. Gizelle planned the initial idea, app, apis and some dependencies and prepared the intial trello cards. Chris assisted with fleshing out the idea and adding additional trello cards before and during development.
 
-The aim of this project was to build the core app (Early Beginnings) first and then incorporate features from the Expansion version. The aim was not to deliver the full expansion version, but rather to build as many features as possible, towards the full expansion app, within the allowed development timeline.   
+The aim of this project was to build the core app (Early Beginnings) first and then incorporate features from the Expansion version. The aim was not to deliver the full expansion version, but rather to build as many features as possible, towards the full expansion app, within the allowed development timeline. More expansion features were incorporated inot the delivered app than initially anticipated during the planning phase.  
 
-An Agile methodology was used in this project. This methodology allows for changing the requirements at any time to adapt to challenges encountered and to incorporate additional features as time permits. The team managed the project jointly rather than appointing a single project manager. Informal testing was performed concurrently with development e.g postman was used to test all crud functionality for cards, users and messages during development (some but not all screenshots of this testing were recorded in trello cards). User testing videos were recorded and uploaded during development. Both the front and backend apps were deployed early and often. Most formal framework testing for both the rails and react apps were done in the late stages of development. Test Driven Development was not used during this project, allowing developers to built as many features as possible before the deadline. Admittedly, TDD would be best practice to ensure that further development does not break working code. Testing cards were not assigned to specific developers early on because it was proposed that developers write tests for the components that they build. Due to time constraints and various components depending on completion of other components and code, the latter was prioritised over early test writing.
+An Agile methodology was used in this project. This methodology allows for changing the requirements at any time to adapt to challenges encountered and to incorporate additional features as time permits. The team managed the project jointly rather than appointing a single project manager. 
 
-Gizelle created and deployed both front and back end apps. She wrote most of the backend code, did the styling for the front end and built the navbar, contacts page (including contact form and Bing Map), Sign up and Log in forms. Gizelle also prepared most of the documentation. Gizelle wrote the Rails tests and recorded the user test videos but wrote limited tests for the React app.
+Informal testing was performed concurrently with development e.g postman was used to test all crud functionality for cards, users and messages during development (some but not all screenshots of this testing were recorded in trello cards and some testing is recorded in a youtube test video). User testing videos were recorded and uploaded to youtube.
 
-Chris is the more experienced React developer and wrote the code for the core components of the front end app - the cards and chatroom components that handle the third party movie API (to retrieve movie data for each imdb id stored in the database) and Rails API (messages, users and cards). Chris also coded the components required to create a card, retrieve messages, post/edit/destroy messages and pop up warning. He also prepared the dataflow diagram, user stories and application architecture diagram for the documentation.
+Both the front and backend apps were deployed early and often. Most formal framework testing for both the rails and react apps were done in the late stages of development. Test Driven Development was not used during this project, allowing developers to built as many features as possible before the deadline. Admittedly, TDD would be best practice but neither developer had significant testing experience prior to the project and agreed to prioritise building features over learning testing at outset. Testing cards were not assigned to specific developers early on because it was initially proposed that developers write tests for the components that they build. Due to time constraints and various components depending on completion of other components and code, the latter was prioritised over early test writing. Gizelle wrote the backend tests and recorded the user test videos for youtube but wrote very limited tests for react due to time constraints. Despite time constraints, Chris added testing to the React app prior to submission.
 
-Some tasks were assigned and allocated at outset. Later tasks were picked up by developers in accordance with their preference, skills and capacity.
+Gizelle created and deployed both front and back end apps. She wrote most of the backend code, did the styling for the front end and built the navbar, contacts page (including contact form and Bing Map), Sign up and Log in forms. Gizelle also prepared most of the documentation.
+
+Chris is the more experienced React developer and wrote the code for the most important and complex components of the front end app - the cards and messages components that handle the third party movie API (to retrieve movie data for each imdb id stored in the database) and Rails API (messages, users and cards data from the postgreSQL database). Chris also took on integration. He also prepared the dataflow diagram, user stories and application architecture diagram for the documentation.
+
+Some tasks were assigned and allocated at outset. Later tasks were picked up by developers in accordance with their preference, skills and capacity. 
 
 Trello is a Kanban-style web application used for organizing collaborative projects. Columns represent stages of the process (to do, working on, blocked, finished). Cards represent tasks. These task cards are moved between the column stages as work on the task progresses. The board, as a whole, provides a visual depiction of the project progress. 
 
