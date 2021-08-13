@@ -4,6 +4,7 @@
 GitHub repository: https://github.com/Ellezique/Full-Stack-App-PART-A
 
 -----------------------------------------------------------
+###R10 & R11 Links (URL)
 #### GitHub repositories:
 - Front end: https://github.com/Ellezique/aftercredits-client
 - Back end: https://github.com/Ellezique/aftercredits-server
@@ -15,6 +16,8 @@ GitHub repository: https://github.com/Ellezique/Full-Stack-App-PART-A
 
 Heroku and Netlify are connected to their respective Github repositories and are set up for automatic deployment from the master branch.
 
+#### User test videos
+- All videos on this youtube channel:https://www.youtube.com/channel/UClVdwtuINqN1dOWUrmhG8rA
 ----------------------------------------------------------------
 
 ### R1: DESCRIPTION OF WEBSITE
@@ -34,7 +37,7 @@ The delivered application has built in functionality to create additional cards 
 
 Users can see the listed movie/series cards with the film title and poster. A user can select a card and then see more information about the movie/series (release date, genre, cast and description) or enter the chatroom to see what other users have posted and join the discussion by posting their own comments.
 
-AfterCredits is a site for users to get information about listed movies/series and join a chatroom discussion.
+AfterCredits is a site for users to get information about listed movies/series and join the listed movies/series chatroom discussions.
 
 DISCLAIMER:
 The app was planned with an early beginnings version (with basic features) and an expansion version with numerous features (to strive towards but unlikely to fully implement by the deadline). The delivered application, as anticipated, includes numerous features from the expansion version but does not implement all features from the expansion version.
@@ -162,7 +165,7 @@ Styling could include the following:
 ![Delivered App Sitemap](docs/deliveredsitemap.PNG)
 
 ###### Database: Delivered
-![Database](docs/final_erd.PNG)
+![Database](docs/after_credits_erd.PNG)
 
 The backend Rails API app handles the users, messages and cards. The data is stored in a postgreSQL database.
 
@@ -200,8 +203,8 @@ A user can select the movie/series card that interests them:
 A "Show more" button toggles additional movie data. A "Chatroom" button toggles the chatroom. Both can be open at the same time.
 
 ![Show more](docs/showmore.PNG)
-![Chatroom](docs/showmore.PNG)
-![Toggle both](docs/toggleboth.PNG)
+![Chatroom](docs/chatroomonly.PNG)
+![Toggle both](docs/chatroomshowtoggle.PNG)
 
 
 ###### Chatroom: Delivered
@@ -274,40 +277,40 @@ The target audience includes users who:
 **C. Delivered Application:** 
 As above. The onus is on users themselves to certify and confirm that they are at least 18 years old when signing up. 
 
-#### TECH STACK, third party APIs and Packages 
+#### TECH STACK, APIs and Packages 
 
 - **HTML**: HyperText Markup Language is the standard markup language for documents to display in web browsers. 
 - **CSS**: Cascading Style Sheets describe the presentation and styling of markup language documents. There are numerous style sheets for general style, components and pages. Not all pages and componenets required their own stylesheets.
 
 ##### Front-end/client side
-- **React.js**: [React](https://reactjs.org/) is a front-end (client side) **JavaScript** library used to build user interfaces and components.
-- **Yarn**: [Yarn](https://yarnpkg.com/) is a [package manager](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/) for JavaScript (client side) that will be used for this project. It is prefereable to use yarn with React apps. The most stable version currently is 1.22.5, which will be used for this project. To add and remove packages, `yarn add [package]` and `yarn remove [package]`. Install all project dependencies using `yarn install`. Dependencies can be upgraded to the current stable versions by running `yarn upgrade`. All dependencies and configuration for the React side of AfterCredits will be specified in the package.json file.
-- **Jest**: [Jest](https://jestjs.io/) is a testing framework that works with React projects (testing front-end). It was used for testing along with the testing-library.
+- **React.js**: [React](https://reactjs.org/) is a front-end (client side) **JavaScript** library used to build user interfaces and components. This enabled building seperate and reusable components that made the development process more organised. It also reduced code conflicts as developers could work on seperate components in seperate files. Similarly, building seperate components reduces the risk of accidentally breaking features that have already been completed, whilst also making it easier to identify where bugs are (in seperate components rather than combing through huge files of code mixing numerous components). 
+- **Yarn**: [Yarn](https://yarnpkg.com/) is a [package manager](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/) for JavaScript (client side) that was used for this project. It is prefereable to use yarn with React apps. The most stable version currently is 1.22.5, which was used for this project. To add and remove packages, `yarn add [package]` and `yarn remove [package]`. Install all project dependencies using `yarn install`. Dependencies can be upgraded to the current stable versions by running `yarn upgrade`. All dependencies and configuration for the React side of AfterCredits will be specified in the package.json file. Npm packages were accidentally introduced at some stage during development but then fixed by removing the package-lock.json file. 
+- **Jest**: [Jest](https://jestjs.io/) is a testing framework that works with React projects (testing front-end). It was used for testing along with the testing-library. This is a fairly logical choice for testing a React app. Time was a restricting factor that did impact the volume of testing. Neither developer had prior jest testing experience but fortunately there are a lot of resources available.
 - **Packages**
-- [Bing Maps-React](https://www.npmjs.com/package/bingmaps-react) is a package that makes it relatively simple to use the Bing Maps API, and accordingly requires a Bing Maps API key. Unfortunately, this package throws an error when testing with Jest. This error remains an open issue that has been previously reported and followed up on by one of the developers in this app: https://github.com/milespratt/bingmaps-react/issues/32
+- [Bing Maps-React](https://www.npmjs.com/package/bingmaps-react) is a package that makes it relatively simple to use the Bing Maps API in a React app, and accordingly requires a Bing Maps API key, which was easy to obtain without the need to register an account with a credit card. Bing Maps is free for developers to use and there is no risk of incurring fees. The Bing Maps-React package did not have documentation addressing infoboxes with pushpins but this was ultimately resolved. The package is otherwise very convenient to implement and use. Unfortunately, this particular package throws an error when testing with Jest. This error remains an open issue that has been previously reported and followed up on by one of the developers in this app: https://github.com/milespratt/bingmaps-react/issues/32
 ![Bing Maps for React package issue](docs/bingerror.PNG)
-- [Font Awesome](https://fontawesome.com) provides vector icons and logos. The initial logo was a vector icon, which was later replaced by a popcord png image. Fontawesome vector icons were used for the navbar burger menu icons.
-- [Axios](https://www.npmjs.com/package/axios) is a promise based HTTP client for the browser. It was especially useful on the front end application for API calls (request and response).
+- [Font Awesome](https://fontawesome.com) provides vector icons and logos. The initial logo was a vector icon, which was later replaced by a popcorn png image. Fontawesome vector icons were used for the navbar burger menu icons. It is easy to set up and use and allows for future expansion of the app to incorporate more vector icons (e.g. in chatrooms).
+- [Axios](https://www.npmjs.com/package/axios) is a promise based HTTP client for the browser. It was especially useful on the front end application for API calls (request and response).The app uses Rails API (messages, users, cards) and the third party movie APIs. 
 - As this is a React application, dependencies include testing-library for react and jest as well as react-dom and react-router-dom.
-- **Netlify**: [Netlify](https://www.netlify.com/) is used to deploy the front-end React repository. The service used for this project is free of charge. Netlify forms was used for the contact form on the contact page and Netlify receives and stores the contact information submitted (and also includes a helpful spam filter).
+- **Netlify**: [Netlify](https://www.netlify.com/) is used to deploy the front-end React repository. The service used for this project is free of charge. Netlify forms was used for the contact form on the contact page and Netlify receives and stores the contact information submitted (and also includes a helpful spam filter). Netlify forms also provides security and is a very practical and easy to implement solution for the contact form. Netlify allows for easy handling of secret API keys stored in .env files in .gitignore - the keys were copied to Netlify using the user friendly dashboard after deployment.
 
 ##### Back-end/client side
 The back end application is a Rails API for messages, users and movie/series cards.
-- **Ruby on Rails**: [Ruby on Rails](https://rubyonrails.org/) is a back-end/ server side application framework written in Ruby. It has a model-view-controller framework.
-- **Rspec**: [Rspec](https://rspec.info/) is a meta-gem used for testing in Ruby on Rails. Tests have been prepared for models and requests.
+- **Ruby on Rails**: [Ruby on Rails](https://rubyonrails.org/) is a back-end/ server side application framework written in Ruby. It has a model-view-controller framework but only models and controllers were required for this backend api app.
+- **Rspec**: [Rspec](https://rspec.info/) is a meta-gem used for testing in Ruby on Rails. Tests have been prepared for models and requests. See gems below. Note that informal testing was done using postman during developement (see the youtube test channel and trello cards for some examples of that testing)
 - **RubyGems**: [Ruby Gems](https://rubygems.org/) is a package management framework for Ruby and is used to distribute Ruby programs and libraries. RubyGems is a tool used to install gems.
 The following additional gems were used to assist with testing the rails api:
 - [Factory Bot](https://github.com/thoughtbot/factory_bot_rails) contains methods to dynamically create fake seed data for the testing environment. A factories folder contains files for card, message and user. 
 - [Database Cleaner](https://rubygems.org/gems/database_cleaner/versions/1.5.3) is a gem that was used for cleaning databases in the testing environment. This gem was needed to get rid of the factory bot data.
-- [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers) provides RSpec-compatible one-liners to test common Rails functionality that, if written by hand, would be much longer, more complex, and error-prone. Shoulda Matchers was used to test some model associations and validations.
-- [Knock](https://rubygems.org/gems/knock) is a gem that provides for JWT authentication for the Rails API app.
+- [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers) provides RSpec-compatible one-liners to test common Rails functionality that, if written manually would be longer and more error-prone. Shoulda Matchers was used to test  model associations and validations.
+- [Knock](https://rubygems.org/gems/knock) is a gem that provides for JWT authentication for the Rails API app. This was crucial for user authentication. It was a good solution for this app that requires users to sign up and log in.
 
-- **Heroku**: [Heroku](https://www.heroku.com/) is a cloud platform that supports Ruby on Rails. It will be used to deploy the Ruby on Rails repository (back-end/ server-side). The service used for this project is free of charge.
+- **Heroku**: [Heroku](https://www.heroku.com/) is a cloud platform that supports Ruby on Rails. It was used to deploy the Ruby on Rails repository (back-end/ server-side). The service used for this project is free of charge.
 
 
 **The third party API's used are**:
 - [Bing Maps](https://www.bingmapsportal.com) for the interactive map on the contact page.
-- [Movie Database IMDB Alternative](https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative/) to retrieve movie/series data using only the imdb id.
+- [Movie Database IMDB Alternative](https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative/) to retrieve movie/series data using only the imdb id. The postgreSQL databse only stores the imdb_id. All other movie data is retrieved from the movie API.
 
 ##### User Testing (Development and Production)
 Manual testing was recorded in video format and uploaded to Youtube. The manual video tests include tests for development and production testing. They can be accessed at the following channel: https://www.youtube.com/channel/UClVdwtuINqN1dOWUrmhG8rA
@@ -315,10 +318,10 @@ Manual testing was recorded in video format and uploaded to Youtube. The manual 
 - In future, Cypress could be considered as an alternative for user testing.
 
 ##### Database
-- **PostgreSQL**: [PostgreSQL](https://www.postgresql.org/) is a free relational database management system. It stores the data for users, messages and move/series cards.
+- **PostgreSQL**: [PostgreSQL](https://www.postgresql.org/) is a free relational database management system. It stores the data for users, messages and move/series cards. The ERD diagram is above and shows the database structure. It was easy, fast and straight forward to link PgAdmin to Heroku to see the database contents for the deployed app. This was very helpful during early development and informal testing. The admin user feature was added towards the end which did require an update of teh ERD as isAdmin was added to the Users table, though this was easily implement in rails.
 
 ##### Repositories
-- **Github**: [Github](https://github.com/) is a development platform and service hosting Git version control. The service used for this project is free of charge.
+- **Github**: [Github](https://github.com/) is a development platform and service hosting Git version control. The service used for this project is free of charge. It also integrates with Netlify and Heroku making automatic deployment from master branches a hassle free solution to continuous deployment. Additionally, Github integrates with Trello, enabling developers to attach commit messages to trello cards throughout development. Gitguard has also been integrated allowing for security scans of all code pushed to Github and Gitguard detected an a secret api key in a commit history that was pushed to Github before the keys were isolated in a .env file that was in .gitignore. The repository was private at the time but the detection allowed for a quick api key reset to ensure ongoing security and protection of the secret keys especially in the event that the repository is made public in future (as it likely will be). 
 
 ##### Source Control 
 - **Git**: [Git](https://git-scm.com/) is a version control system for tracking changes across a set of files and to coordinate work between programmers working collaboratively on developing source code.
@@ -398,7 +401,7 @@ Wireframes were prepared using Balsamiq Wireframes.
 ![Expanded app wireframes: Expansion version](docs/expanded_app_wireframes.png)
 
 **C. FINAL WIREFRAMES for the Delivered Application:**
-![Final Wireframes](docs/final_wireframes.png)
+![Final Wireframes](docs/Delivered_wireframes.png)
 ### R6: TRELLO
 
 Planning commenced with a discussion and presentation of various concept ideas. One concept idea was selected and developed into a project idea. Gizelle planned the initial idea, app, apis and some dependencies and prepared the intial trello cards. Chris assisted with fleshing out the idea and adding additional trello cards.
