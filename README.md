@@ -4,7 +4,7 @@
 GitHub repository: https://github.com/Ellezique/Full-Stack-App-PART-A
 
 -----------------------------------------------------------
-###R10 & R11 Links (URL)
+### R10 & R11 Links (URL)
 #### GitHub repositories:
 - Front end: https://github.com/Ellezique/aftercredits-client
 - Back end: https://github.com/Ellezique/aftercredits-server
@@ -17,7 +17,7 @@ GitHub repository: https://github.com/Ellezique/Full-Stack-App-PART-A
 Heroku and Netlify are connected to their respective Github repositories and are set up for automatic deployment from the master branch.
 
 #### User test videos
-- All videos on this youtube channel:https://www.youtube.com/channel/UClVdwtuINqN1dOWUrmhG8rA
+- All videos on this youtube channel: https://www.youtube.com/channel/UClVdwtuINqN1dOWUrmhG8rA
 
 #### Trello
 - Trello board: https://trello.com/b/VLtFLtdT/aftercredits
@@ -405,7 +405,7 @@ Wireframes were prepared using Balsamiq Wireframes.
 
 **C. FINAL WIREFRAMES for the Delivered Application:**
 ![Final Wireframes](docs/Delivered_wireframes.png)
-### R6: TRELLO
+### R6: TRELLO & TASKS
 
 Planning commenced with a discussion and presentation of various concept ideas. One concept idea was selected and developed into a project idea. Gizelle planned the initial idea, app, apis and some dependencies and prepared the intial trello cards. Chris assisted with fleshing out the idea and adding additional trello cards before and during development.
 
