@@ -211,7 +211,7 @@ A "Show more" button toggles additional movie data. A "Chatroom" button toggles 
 
 
 ###### Chatroom: Delivered
-Each movie/series card has its own chatroom. The chatroom shows all messages for that card. When there a lot of messages, users will have a scroll bar to use should they wish to scroll down to old messages. Logged in users can post messages.
+Each movie/series card has its own chatroom. The chatroom shows all messages for that card. Logged in users can post, edit and delete their own messages. Admin users can delete anyone's message.
 
 An option button reveals edit and delete buttons. Individual messages can be edited or deleted. A pop up warns users before deleting a message.
 
@@ -409,7 +409,7 @@ Wireframes were prepared using Balsamiq Wireframes.
 
 Planning commenced with a discussion and presentation of various concept ideas. One concept idea was selected and developed into a project idea. Gizelle planned the initial idea, app, apis and some dependencies and prepared the intial trello cards. Chris assisted with fleshing out the idea and adding additional trello cards before and during development.
 
-The aim of this project was to build the core app (Early Beginnings) first and then incorporate features from the Expansion version. The aim was not to deliver the full expansion version, but rather to build as many features as possible, towards the full expansion app, within the allowed development timeline. More expansion features were incorporated inot the delivered app than initially anticipated during the planning phase.  
+The aim of this project was to build the core app (Early Beginnings) first and then incorporate features from the Expansion version. The aim was not to deliver the full expansion version, but rather to build as many features as possible, towards the full expansion app, within the allowed development timeline. More expansion features were incorporated into the delivered app than initially anticipated during the planning phase.  
 
 An Agile methodology was used in this project. This methodology allows for changing the requirements at any time to adapt to challenges encountered and to incorporate additional features as time permits. The team managed the project jointly rather than appointing a single project manager. 
 
